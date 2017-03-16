@@ -478,7 +478,7 @@
       <xs:element name="m12_mocd" type="xs:string" minOccurs="0"/>
       <xs:element name="m13_bprlist" type="tns:cBedProfileList" minOccurs="0"/>
       <xs:element name="m14_zerr" type="xs:int"/>
-      <xs:element name="m15_usok" type="xs:int"/>
+      <xs:element name="m15_usok" type="xs:int" minOccurs="0"/>
       <xs:element name="z99_guid" type="xs:string" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
