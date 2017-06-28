@@ -488,10 +488,6 @@
       <input wsam:Action="http://main.dce/DCExchangeSrv/GetAttachListByRangeRequest" message="tns:GetAttachListByRange"/>
       <output wsam:Action="http://main.dce/DCExchangeSrv/GetAttachListByRangeResponse" message="tns:GetAttachListByRangeResponse"/>
     </operation>
-    <operation name="getEvPlanQtys">
-      <input wsam:Action="http://main.dce/DCExchangeSrv/getEvPlanQtysRequest" message="tns:getEvPlanQtys"/>
-      <output wsam:Action="http://main.dce/DCExchangeSrv/GetAttachListByRangeResponse" message="tns:getEvPlanQtysResponse"/>
-    </operation>
     
     <!-- getEvPlanQtys -->
     <operation name="getEvPlanQtys">
