@@ -288,12 +288,6 @@
   <message name="GetAttachListByRangeResponse">
     <part name="parameters" element="tns:GetAttachListByRangeResponse"/>
   </message>
-  <message name="SendAttachDoctorSectionInformation">
-    <part name="parameters" element="tns:SendAttachDoctorSectionInformation"/>
-  </message>
-  <message name="SendAttachDoctorSectionInformationResponse">
-    <part name="parameters" element="tns:SendAttachDoctorSectionInformationResponse"/>
-  </message>
 
   
   <!-- getEvPlanQtys -->
@@ -494,10 +488,6 @@
     <operation name="GetAttachListByRange">
       <input wsam:Action="http://main.dce/DCExchangeSrv/GetAttachListByRangeRequest" message="tns:GetAttachListByRange"/>
       <output wsam:Action="http://main.dce/DCExchangeSrv/GetAttachListByRangeResponse" message="tns:GetAttachListByRangeResponse"/>
-    </operation>
-    <operation name="SendAttachDoctorSectionInformation">
-      <input wsam:Action="http://main.dce/DCExchangeSrv/SendAttachDoctorSectionInformationRequest" message="tns:SendAttachDoctorSectionInformation"/>
-      <output wsam:Action="http://main.dce/DCExchangeSrv/SendAttachDoctorSectionInformationResponse" message="tns:SendAttachDoctorSectionInformationResponse"/>
     </operation>
     
     
@@ -930,15 +920,6 @@
       </output>
     </operation>
     <operation name="GetAttachListByRange">
-      <soap:operation soapAction=""/>
-      <input>
-        <soap:body use="literal"/>
-      </input>
-      <output>
-        <soap:body use="literal"/>
-      </output>
-    </operation>
-    <operation name="SendAttachDoctorSectionInformation">
       <soap:operation soapAction=""/>
       <input>
         <soap:body use="literal"/>
