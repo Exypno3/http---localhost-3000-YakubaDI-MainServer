@@ -1234,6 +1234,7 @@ public class DCExchangeSrv {
     }
     //------------------------------------------------------------------------------------------------------------------------------
     @WebMethod(operationName = "getEvPlanQtys")
+    @WebResult(name="orderpack")
     public CevPlanQtysPackage getEvPlanQtys(@WebParam(name = "username") String username, @WebParam(name = "password") String password, 
             @WebParam(name = "sendercode") String sendercode, @WebParam(name = "year") int year) {
       try{
