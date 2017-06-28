@@ -533,6 +533,8 @@ public class CPackageInformation {
               
             JAXBContext jc = null;
             int PackType = 0;
+
+            ///////////////////////////////////////////////////////////////////
             if(param.getClass().getName() == "dce.main.entity.COrderClinicPackage")
             {
                 PackType = 1;
@@ -608,7 +610,13 @@ public class CPackageInformation {
                 PackType = 110;
                 jc = JAXBContext.newInstance(dce.main.entity.CDeAttachQueryForMOPackage.class);
             }
+            else if(param.getClass().getName() == "dce.main.entity.CevPlanQtysPackage")
+            {
+                PackType = 231;
+                jc = JAXBContext.newInstance(dce.main.entity.CevPlanQtysPackage.class);
+            }
             
+            ///////////////////////////////////////////////////////////////////////////////////
             if(PackType == 109)
             {
                 CDBSever dbsever = new CDBSever(IConfigConstantsList.ConfMsgList[0], IConfigConstantsList.ConfMsgList[1]);

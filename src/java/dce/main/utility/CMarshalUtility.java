@@ -109,6 +109,10 @@ public class CMarshalUtility {
             {
                 context = JAXBContext.newInstance(dce.main.entity.CDeAttachQueryForMOPackage.class);
             }
+            else if("dce.main.entity.CEvPlanQtysPackage".equals(param.getClass().getName()))
+            {
+                context = JAXBContext.newInstance(dce.main.entity.CevPlanQtysPackage.class);
+            }
             
             
             Marshaller m = context.createMarshaller();

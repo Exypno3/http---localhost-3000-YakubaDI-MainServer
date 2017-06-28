@@ -1233,6 +1233,15 @@ public class DCExchangeSrv {
         }
     }
     //------------------------------------------------------------------------------------------------------------------------------
+    @WebMethod(operationName = "getEvPlanQtys")
+    public CevPlanQtysPackage getEvPlanQtys(@WebParam(name = "username") String username, @WebParam(name = "password") String password, 
+            @WebParam(name = "sendercode") String sendercode, @WebParam(name = "year") int year) {
+      try{
+            return CPackageInformation.BuildPackage(new CevPlanQtysPackage(), username, password, sendercode, "", "", year, 0, "", null, 1, 0, 0);
+            
+        }catch(Exception e){
+            return null;
+        }    }
     
 }
 //------------------------------------------------------------------------------------------------------------------------------

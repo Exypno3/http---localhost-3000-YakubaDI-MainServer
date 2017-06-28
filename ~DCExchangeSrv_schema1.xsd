@@ -189,9 +189,6 @@
 
   <xs:element name="SetLoginAccessResponse" type="tns:SetLoginAccessResponse"/>
 
-  
-  
-
   <xs:complexType name="GetOrdersNullificationLDS">
     <xs:sequence>
       <xs:element name="username" type="xs:string" minOccurs="0"/>
@@ -481,7 +478,6 @@
       <xs:element name="m12_mocd" type="xs:string" minOccurs="0"/>
       <xs:element name="m13_bprlist" type="tns:cBedProfileList" minOccurs="0"/>
       <xs:element name="m14_zerr" type="xs:int"/>
-      <xs:element name="m15_usok" type="xs:int" minOccurs="0"/>
       <xs:element name="z99_guid" type="xs:string" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
@@ -1498,52 +1494,5 @@
       <xs:element name="orderpack" type="tns:cOrderHospitalPackage" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
-  
-  
-  
-  
-  
-  
-  
-  
-  <!-- getEvPlanQtys -->
-  <xs:element name="getEvPlanQtys" type="tns:getEvPlanQtys"/>
-  <xs:element name="getEvPlanQtysResponse" type="tns:getEvPlanQtysResponse"/>
-  <xs:complexType name="getEvPlanQtys">
-    <xs:sequence>
-      <xs:element name="username" type="xs:string" minOccurs="0"/>
-      <xs:element name="password" type="xs:string" minOccurs="0"/>
-      <xs:element name="sendercode" type="xs:string" minOccurs="0"/>
-      <xs:element name="year" type="xs:int" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="getEvPlanQtysResponse">
-    <xs:sequence>
-      <xs:element name="orderpack" type="tns:CevPlanQtysPackage" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="CevPlanQtysPackage">
-    <xs:sequence>
-      <xs:element name="p10_packinf" type="tns:cPackageInformation" minOccurs="0"/>
-      <xs:element name="evPlanQtys" type="tns:CevPlanQtys" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="CevPlanQtys">
-    <xs:sequence>
-      <xs:element name="evPlanQuantity" type="tns:CevPlanQuantity" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="CevPlanQuantity">
-    <xs:sequence>
-      <xs:element name="id" type="xs:int" minOccurs="0"/>
-      <xs:element name="kind" type="xs:int" minOccurs="0"/>
-      <xs:element name="year" type="xs:int" minOccurs="0"/>
-      <xs:element name="mnth" type="xs:int" minOccurs="0"/>
-      <xs:element name="code_mo" type="xs:int" minOccurs="0"/>
-      <xs:element name="quantity" type="xs:int" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>  
-  <!-- end of getEvPlanQtys -->
-  
 </xs:schema>
 
