@@ -1239,32 +1239,24 @@
 
 
   <!-- getEvPlanQtys -->
+  <!-- getEvPlanQtys -->
   <xs:element name="getEvPlanQtys" type="tns:getEvPlanQtys"/>
   <xs:element name="getEvPlanQtysResponse" type="tns:getEvPlanQtysResponse"/>
-  <xs:complexType name="getEvPlanQtys">
-    <xs:sequence>
-      <xs:element name="username" type="xs:string" minOccurs="0"/>
-      <xs:element name="password" type="xs:string" minOccurs="0"/>
-      <xs:element name="sendercode" type="xs:string" minOccurs="0"/>
-      <xs:element name="year" type="xs:int" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="getEvPlanQtysResponse">
-    <xs:sequence>
-      <xs:element name="orderpack" type="tns:CevPlanQtysPackage" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
+
+
   <xs:complexType name="CevPlanQtysPackage">
     <xs:sequence>
       <xs:element name="p10_packinf" type="tns:cPackageInformation" minOccurs="0"/>
       <xs:element name="evPlanQtys" type="tns:CevPlanQtys" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
+
   <xs:complexType name="CevPlanQtys">
     <xs:sequence>
       <xs:element name="evPlanQuantity" type="tns:CevPlanQuantity" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
+
   <xs:complexType name="CevPlanQuantity">
     <xs:sequence>
       <xs:element name="id" type="xs:int" minOccurs="0"/>
@@ -1275,9 +1267,28 @@
       <xs:element name="quantity" type="xs:int" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
+
+
+  <xs:complexType name="getEvPlanQtys">
+    <xs:sequence>
+      <xs:element name="username" type="xs:string" minOccurs="0"/>
+      <xs:element name="password" type="xs:string" minOccurs="0"/>
+      <xs:element name="sendercode" type="xs:string" minOccurs="0"/>
+      <xs:element name="year" type="xs:int" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getEvPlanQtysResponse">
+    <xs:sequence>
+      <xs:element name="orderpack" type="tns:CevPlanQtysPackage" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+
   <!-- end of getEvPlanQtys -->
   
 </xs:schema>
+
 
 
 
