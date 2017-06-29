@@ -837,15 +837,67 @@ public class CPackageInformation {
     }
     //--------------------------------------------------------------------------------------------------
     
-    /*public static void main(String[] args) {
+    public static void main(String[] args) {
         
-        CAttachReportParam params = new CAttachReportParam();
-        params.setD_01(new Date());
+        String ggg = "<orderpack>\n" +
+"  <p10_packinf>\n" +
+"    <p10_pakagedate>2017-06-29T11:52:55.0900000</p10_pakagedate>\n" +
+"    <p11_pakagesender>9007</p11_pakagesender>\n" +
+"    <p12_pakageguid>0BE14100-6E0A-4CFC-8686-782F3708B1A2</p12_pakageguid>\n" +
+"    <p13_zerrpkg>0</p13_zerrpkg>\n" +
+"  </p10_packinf>\n" +
+"  <evPlanQtys>\n" +
+"    <evPlanQuantity>\n" +
+"      <id>7</id>\n" +
+"      <kind>1</kind>\n" +
+"      <year>2017</year>\n" +
+"      <mnth>1</mnth>\n" +
+"      <code_mo>01001</code_mo>\n" +
+"      <quantity>87</quantity>\n" +
+"    </evPlanQuantity>\n" +
+"    <evPlanQuantity>\n" +
+"      <id>2303</id>\n" +
+"      <kind>2</kind>\n" +
+"      <year>2017</year>\n" +
+"      <mnth>12</mnth>\n" +
+"      <code_mo>45014</code_mo>\n" +
+"      <quantity>184</quantity>\n" +
+"    </evPlanQuantity>\n" +
+"    <evPlanQuantity>\n" +
+"      <id>2302</id>\n" +
+"      <kind>2</kind>\n" +
+"      <year>2017</year>\n" +
+"      <mnth>12</mnth>\n" +
+"      <code_mo>46010</code_mo>\n" +
+"      <quantity>20</quantity>\n" +
+"    </evPlanQuantity>\n" +
+"   </evPlanQtys>\n" +
+"</orderpack>";
+        try
+        {
         
+            JAXBContext jc = null;
         
-        CAttachAgregateSmoMoByDate dd = CPackageInformation.MakeReport(new CAttachAgregateSmoMoByDate(), params, 1, "01001", "IcVZRL", "01001");
+            jc = JAXBContext.newInstance(dce.main.entity.CDeAttachPersonPackage.class);
+            
+            Unmarshaller u = jc.createUnmarshaller();
+            StringBuffer xmlStr = new StringBuffer(ggg);
+            StringReader sr = new StringReader(xmlStr.toString());
+            StreamSource ss = new StreamSource(sr);
+            CevPlanQtysPackage res = (CevPlanQtysPackage)u.unmarshal(ss);  
         
-        System.err.println("asdfsdf");
-    }*/
+            /*CevPlanQtysPackage params = new CevPlanQtysPackage();
+            params.setD_01(new Date());
+
+
+            CAttachAgregateSmoMoByDate dd = CPackageInformation.MakeReport(new CAttachAgregateSmoMoByDate(), params, 1, "01001", "IcVZRL", "01001");*/
+
+            System.err.println("asdfsdf");
+        }
+        catch(Exception eee)
+        {
+            String gg = "";
+        }
+    }
 }
 //--------------------------------------------------------------------------------------------------
