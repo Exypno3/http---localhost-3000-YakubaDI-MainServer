@@ -13,7 +13,7 @@ public class CevPlanQtys {
     private CevPlanQuantity evPlanQtys[];
 
     public CevPlanQuantity[] getEvPlanQtys() {
-        return evPlanQtys;
+        return this.evPlanQtys;
     }
 
     public void setEvPlanQtys(CevPlanQuantity[] evPlanQtys) {

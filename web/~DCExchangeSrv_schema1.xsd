@@ -1236,8 +1236,6 @@
       <xs:element name="orderpack" type="tns:cOrderHospitalPackage" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
-
-
   <!-- getEvPlanQtys -->
   <xs:element name="getEvPlanQtys" type="tns:getEvPlanQtys"/>
   <xs:element name="getEvPlanQtysResponse" type="tns:getEvPlanQtysResponse"/>
@@ -1278,5 +1276,4 @@
   <!-- end of getEvPlanQtys -->
   
 </xs:schema>
-
 
