@@ -20,7 +20,7 @@ public class CevPlanQtysPackage {
     }
 
     public CPackageInformation getP10_packinf() {
-        return p10_packinf;
+        return this.p10_packinf;
     }
 
     public void setP10_packinf(CPackageInformation p10_packinf) {
@@ -28,7 +28,7 @@ public class CevPlanQtysPackage {
     }
 
     public CevPlanQtys getEvPlanQtys() {
-        return evPlanQtys;
+        return this.evPlanQtys;
     }
 
     public void setEvPlanQtys(CevPlanQtys evPlanQtys) {

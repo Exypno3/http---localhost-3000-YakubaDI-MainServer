@@ -18,7 +18,7 @@ package dce.main.entity;
         private int quantity;
 
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(int id) {
@@ -26,7 +26,7 @@ package dce.main.entity;
     }
 
     public int getKind() {
-        return kind;
+        return this.kind;
     }
 
     public void setKind(int kind) {
@@ -34,7 +34,7 @@ package dce.main.entity;
     }
 
     public int getYear() {
-        return year;
+        return this.year;
     }
 
     public void setYear(int year) {
@@ -42,7 +42,7 @@ package dce.main.entity;
     }
 
     public int getMnth() {
-        return mnth;
+        return this.mnth;
     }
 
     public void setMnth(int mnth) {
@@ -50,7 +50,7 @@ package dce.main.entity;
     }
 
     public String getCode_mo() {
-        return code_mo;
+        return this.code_mo;
     }
 
     public void setCode_mo(String code_mo) {
@@ -58,7 +58,7 @@ package dce.main.entity;
     }
 
     public int getQuantity() {
-        return quantity;
+        return this.quantity;
     }
 
     public void setQuantity(int quantity) {
