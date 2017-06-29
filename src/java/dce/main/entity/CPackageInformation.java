@@ -696,6 +696,8 @@ public class CPackageInformation {
                 break;
             }
             
+            WriteLog(res_xml, "C:\\Ev.log");
+            
             try { rs.close(); } catch (Exception e) {  }
             try { dbsever.getPreparedStatement().close(); } catch (Exception e) {  }
             try { dbsever.getConnection().close(); } catch (Exception e) {  }
