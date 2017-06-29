@@ -696,7 +696,7 @@ public class CPackageInformation {
                 break;
             }
             
-            WriteLog(res_xml, "C:\\Ev.log");
+            
             
             try { rs.close(); } catch (Exception e) {  }
             try { dbsever.getPreparedStatement().close(); } catch (Exception e) {  }
@@ -705,8 +705,8 @@ public class CPackageInformation {
             Unmarshaller u = jc.createUnmarshaller();
             StringBuffer xmlStr = new StringBuffer(res_xml);
             T res = (T)u.unmarshal(new StreamSource(new StringReader(xmlStr.toString())));  
-
-
+            WriteLog(xmlStr.toString(), "C:\\Ev1.log");
+            WriteLog(res.toString(), "C:\\Ev2.log");
             
             return res;
             
