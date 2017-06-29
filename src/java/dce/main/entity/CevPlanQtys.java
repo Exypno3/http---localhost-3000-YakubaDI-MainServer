@@ -12,14 +12,6 @@ package dce.main.entity;
 public class CevPlanQtys {
     private CevPlanQuantity evPlanQuantity[];
 
-   /* public CevPlanQuantity[] evPlanQuantity() {
-        return this.evPlanQuantity;
-    }
-
-    public void setEvPlanQtys(CevPlanQuantity[] evPlanQtys) {
-        this.evPlanQuantity = evPlanQtys;
-    }*/
-
     public CevPlanQuantity[] getEvPlanQuantity() {
         return evPlanQuantity;
     }

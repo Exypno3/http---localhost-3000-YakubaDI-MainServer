@@ -4,11 +4,12 @@
  * and open the template in the editor.
  */
 package dce.main.entity;
-
+import javax.xml.bind.annotation.XmlType;
 /**
  *
  * @author YakubaDI
  */
+@XmlType(propOrder = {"id","kind","year","mnth","code_mo","quantity"})
 public class CevPlanQuantity {
     private int id;
     private int kind;
