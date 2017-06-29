@@ -6,11 +6,13 @@
 package dce.main.entity;
 
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 /**
  *
  * @author YakubaDI
  */
 @XmlRootElement(name="orderpack")
+@XmlType(propOrder = {"p10_packinf","evPlanQtys"})
 public class CevPlanQtysPackage {
     private CPackageInformation p10_packinf;
     private CevPlanQtys evPlanQtys;

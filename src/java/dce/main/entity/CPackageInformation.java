@@ -704,12 +704,16 @@ public class CPackageInformation {
            
             Unmarshaller u = jc.createUnmarshaller();
             StringBuffer xmlStr = new StringBuffer(res_xml);
-            T res = (T)u.unmarshal(new StreamSource(new StringReader(xmlStr.toString())));  
+            StringReader sr = new StringReader(xmlStr.toString());
+            StreamSource ss = new StreamSource(sr);
+            T res = (T)u.unmarshal(ss);  
+            //T res = (T)u.unmarshal(new StreamSource(new StringReader(xmlStr.toString())));  
             //WriteLog(xmlStr.toString(), "C:\\Ev.xml");
-            if(PackType==231){
-                dce.main.entity.CevPlanQtysPackage res2 = (CevPlanQtysPackage)res;
-                WriteLog(Integer.toString(res2.getEvPlanQtys().getEvPlanQtys()[0].getId()),"C:\\EvId.log");
-            }
+            //if(PackType==231){
+            //    dce.main.entity.CevPlanQtysPackage res2 = (CevPlanQtysPackage)res;
+            //    WriteLog(Integer.toString(res2.getEvPlanQtys().getEvPlanQtys()[0].getId()),"C:\\EvId.log");
+            //}
+            
             
             return res;
             
