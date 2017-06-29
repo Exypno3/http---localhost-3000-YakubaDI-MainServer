@@ -1271,12 +1271,13 @@
       <xs:element name="kind" type="xs:int" minOccurs="0"/>
       <xs:element name="year" type="xs:int" minOccurs="0"/>
       <xs:element name="mnth" type="xs:int" minOccurs="0"/>
-      <xs:element name="code_mo" type="xs:int" minOccurs="0"/>
+      <xs:element name="code_mo" type="xs:string" minOccurs="0"/>
       <xs:element name="quantity" type="xs:int" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
   <!-- end of getEvPlanQtys -->
   
 </xs:schema>
+
 
 

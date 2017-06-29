@@ -9,13 +9,13 @@ package dce.main.entity;
  *
  * @author YakubaDI
  */
-public class CevPlanQuantity {
-    private int id;
-    private int kind;
-    private int year;
-    private int mnth;
-    private String code_mo;
-    private int quantity;
+    public class CevPlanQuantity {
+        private int id;
+        private int kind;
+        private int year;
+        private int mnth;
+        private String code_mo;
+        private int quantity;
 
     public int getId() {
         return id;
