@@ -706,6 +706,10 @@ public class CPackageInformation {
             StringBuffer xmlStr = new StringBuffer(res_xml);
             T res = (T)u.unmarshal(new StreamSource(new StringReader(xmlStr.toString())));  
             //WriteLog(xmlStr.toString(), "C:\\Ev.xml");
+            if(PackType==231){
+                dce.main.entity.CevPlanQtysPackage res2 = (CevPlanQtysPackage)res;
+                WriteLog(Integer.toString(res2.getEvPlanQtys().getEvPlanQtys()[0].getId()),"C:\\EvId.log");
+            }
             
             return res;
             
