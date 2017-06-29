@@ -835,6 +835,7 @@ public class CPackageInformation {
         catch(Exception e){return null;}
         
     }
+}    
     //--------------------------------------------------------------------------------------------------
 /*    
     public static void main(String[] args) {
