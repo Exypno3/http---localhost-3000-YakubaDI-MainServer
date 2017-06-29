@@ -836,7 +836,7 @@ public class CPackageInformation {
         
     }
     //--------------------------------------------------------------------------------------------------
-    
+/*    
     public static void main(String[] args) {
         
         String ggg = "<orderpack>\n" +
@@ -878,7 +878,7 @@ public class CPackageInformation {
         
             JAXBContext jc = null;
         
-            jc = JAXBContext.newInstance(dce.main.entity.CDeAttachPersonPackage.class);
+            jc = JAXBContext.newInstance(dce.main.entity.CevPlanQtysPackage.class);
             
             Unmarshaller u = jc.createUnmarshaller();
             StringBuffer xmlStr = new StringBuffer(ggg);
@@ -886,11 +886,6 @@ public class CPackageInformation {
             StreamSource ss = new StreamSource(sr);
             CevPlanQtysPackage res = (CevPlanQtysPackage)u.unmarshal(ss);  
         
-            /*CevPlanQtysPackage params = new CevPlanQtysPackage();
-            params.setD_01(new Date());
-
-
-            CAttachAgregateSmoMoByDate dd = CPackageInformation.MakeReport(new CAttachAgregateSmoMoByDate(), params, 1, "01001", "IcVZRL", "01001");*/
 
             System.err.println("asdfsdf");
         }
@@ -900,4 +895,5 @@ public class CPackageInformation {
         }
     }
 }
+*/
 //--------------------------------------------------------------------------------------------------
