@@ -615,6 +615,22 @@ public class CPackageInformation {
                 PackType = 231;
                 jc = JAXBContext.newInstance(dce.main.entity.CevPlanQtysPackage.class);
             }
+            /// 232
+            else if(param.getClass().getName() == "dce.main.entity.CevContactsPackage")
+            {
+                PackType = 233; 
+                jc = JAXBContext.newInstance(dce.main.entity.CevContactsPackage.class);
+            }
+            else if(param.getClass().getName() == "dce.main.entity.CevPlanDatesPackage")
+            {
+                PackType = 234; 
+                jc = JAXBContext.newInstance(dce.main.entity.CevPlanDatesPackage.class);
+            }
+            else if(param.getClass().getName() == "dce.main.entity.CevPlanTnsfsPackage")
+            {
+                PackType = 235; 
+                jc = JAXBContext.newInstance(dce.main.entity.CevPlanTnsfsPackage.class);
+            }
             
             ///////////////////////////////////////////////////////////////////////////////////
             if(PackType == 109)

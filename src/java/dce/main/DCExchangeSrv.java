@@ -1244,6 +1244,42 @@ public class DCExchangeSrv {
             return null;
         }    
     }
+
+    //------------------------------------------------------------------------------------------------------------------------------
+    @WebMethod(operationName = "getEvContacts")
+    @WebResult(name="orderpack")
+    public CevContactsPackage getEvContacts(@WebParam(name = "username") String username, @WebParam(name = "password") String password, @WebParam(name = "sendercode") String sendercode) {
+      try{
+            return CPackageInformation.BuildPackage(new CevContactsPackage(), username, password, sendercode, "", "", 0, 0, "", null, 0, 0, 0);
+            
+        }catch(Exception e){
+            return null;
+        }    
+    }
+
+    //------------------------------------------------------------------------------------------------------------------------------
+    @WebMethod(operationName = "getEvPlanDates")
+    @WebResult(name="orderpack")
+    public CevPlanDatesPackage getEvPlanDates(@WebParam(name = "username") String username, @WebParam(name = "password") String password, @WebParam(name = "sendercode") String sendercode) {
+      try{
+            return CPackageInformation.BuildPackage(new CevPlanDatesPackage(), username, password, sendercode, "", "", 0, 0, "", null, 0, 0, 0);
+            
+        }catch(Exception e){
+            return null;
+        }    
+    }
+
+    //------------------------------------------------------------------------------------------------------------------------------
+    @WebResult(name="orderpack")
+    @WebMethod(operationName = "getEvPlanTnsfs")
+    public CevPlanTnsfsPackage getEvPlanTnsfs(@WebParam(name = "username") String username, @WebParam(name = "password") String password, @WebParam(name = "sendercode") String sendercode) {
+      try{
+            return CPackageInformation.BuildPackage(new CevPlanTnsfsPackage(), username, password, sendercode, "", "", 0, 0, "", null, 0, 0, 0);
+            
+        }catch(Exception e){
+            return null;
+        }    
+    }
     
 }
 //------------------------------------------------------------------------------------------------------------------------------
