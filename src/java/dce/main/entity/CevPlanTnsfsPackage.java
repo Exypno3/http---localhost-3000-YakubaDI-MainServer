@@ -12,7 +12,7 @@ import javax.xml.bind.annotation.XmlType;
  * @author YakubaDI
  */
 @XmlRootElement(name="orderpack")
-@XmlType(propOrder = {"p10_packinf","CevPlanTnsfs"})
+@XmlType(propOrder = {"p10_packinf","evPlanTnsfs"})
 public class CevPlanTnsfsPackage {
     private CPackageInformation p10_packinf;
     private CevPlanTnsfs evPlanTnsfs;
