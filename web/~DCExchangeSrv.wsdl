@@ -1006,29 +1006,6 @@
     <!-- end of getEvContacts -->
 
 
-    <!-- getEvPlanDates -->
-    <operation name="getEvPlanDates">
-      <soap:operation soapAction=""/>
-      <input>
-        <soap:body use="literal"/>
-      </input>
-      <output>
-        <soap:body use="literal"/>
-      </output>
-    </operation>
-    <!-- end of getEvPlanDates -->
-
-    <!-- getEvPlanTsnfs -->
-    <operation name="getEvPlanTsnfs">
-      <soap:operation soapAction=""/>
-      <input>
-        <soap:body use="literal"/>
-      </input>
-      <output>
-        <soap:body use="literal"/>
-      </output>
-    </operation>
-    <!-- end of getEvPlanTsnfs -->
 
     
   </binding>
