@@ -542,9 +542,9 @@
     <!-- end of getEvPlanDates -->
 
     <!-- getEvPlanTsnfs -->
-    <operation name="getEvPlanTsnfs">
-      <input wsam:Action="http://main.dce/DCExchangeSrv/getEvPlanTsnfsRequest" message="tns:getEvPlanTsnfs"/>
-      <output wsam:Action="http://main.dce/DCExchangeSrv/getEvPlanTsnfsResponse" message="tns:getEvPlanTsnfsResponse"/>
+    <operation name="getEvPlanTnsfs">
+      <input wsam:Action="http://main.dce/DCExchangeSrv/getEvPlanTnsfsRequest" message="tns:getEvPlanTnsfs"/>
+      <output wsam:Action="http://main.dce/DCExchangeSrv/getEvPlanTnsfsResponse" message="tns:getEvPlanTnsfsResponse"/>
     </operation>
     <!-- end of getEvPlanTsnfs -->
 
@@ -1019,7 +1019,7 @@
     <!-- end of getEvPlanDates -->
 
     <!-- getEvPlanTsnfs -->
-    <operation name="getEvPlanTsnfs">
+    <operation name="getEvPlanTnsfs">
       <soap:operation soapAction=""/>
       <input>
         <soap:body use="literal"/>
