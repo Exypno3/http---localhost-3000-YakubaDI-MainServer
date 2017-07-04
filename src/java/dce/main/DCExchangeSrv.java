@@ -1281,6 +1281,34 @@ public class DCExchangeSrv {
         }    
     }
     //------------------------------------------------------------------------------------------------------------------------------
+    @WebMethod(operationName = "putEvContacts")
+    @WebResult(name="responcepack")
+    public CResponceOrdersPackage putEvContacts(@WebParam(name = "orderpack") CevContactsPackage pinppack,
+            @WebParam(name = "username") String username, @WebParam(name = "password") String password, @WebParam(name = "sendercode") String sendercode){
+      try{
+            if(pinppack.getP10_packinf().getP12_pakageguid().length() < 10 || pinppack.getP10_packinf().getP12_pakageguid() == null)
+                return CPackageInformation.CreateErrorPackage(new CResponceOrdersPackage(), 1005, pinppack.getP10_packinf().getP12_pakageguid());
+            
+            if(!pinppack.getP10_packinf().getP11_pakagesender().equals(sendercode))
+                return CPackageInformation.CreateErrorPackage(new CResponceOrdersPackage(), 1006, pinppack.getP10_packinf().getP12_pakageguid());
+          
+            int _res = CDBSever.CheckUserForAccess(username, password, sendercode);
+            
+            if(_res == 0)
+                return CPackageInformation.CreateErrorPackage(new CResponceOrdersPackage(), 1002, pinppack.getP10_packinf().getP12_pakageguid()); 
+            else if(_res == -1)
+                return CPackageInformation.CreateErrorPackage(new CResponceOrdersPackage(), 3000, pinppack.getP10_packinf().getP12_pakageguid()); 
+          
+            return pinppack.getP10_packinf().evPutPackage(pinppack);
+        }catch(Exception e){
+            
+            pinppack.getP10_packinf().SaveResponceInfoToDB(CPackageInformation.CreateErrorPackage(new CResponceOrdersPackage(), 1003, pinppack.getP10_packinf().getP12_pakageguid()), 
+                    pinppack.getP10_packinf().getP12_pakageguid());
+            
+            return CPackageInformation.CreateErrorPackage(new CResponceOrdersPackage(), 1003, pinppack.getP10_packinf().getP12_pakageguid());
+        }
+    }
+    //------------------------------------------------------------------------------------------------------------------------------
     
     
 }

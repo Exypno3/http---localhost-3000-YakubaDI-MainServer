@@ -893,6 +893,126 @@ public class CPackageInformation {
         }
     }
     //--------------------------------------------------------------------------------------------------
+    //--------------------------------------------------------------------------------------------------
+    public<T> CResponceOrdersPackage evPutPackage(T pIn) throws JAXBException
+    {
+        //nzap = -1 ошибка в оформлении пакета
+        String PackGuid = "", pkSenderCode = ""; 
+        int zErr_Code = 0;
+        CResponceOrdersPackage _return = new CResponceOrdersPackage();
+        try
+        {
+            CDBSever dbsever = new CDBSever(IConfigConstantsList.ConfMsgList[0], IConfigConstantsList.ConfMsgList[1]);
+            dbsever.setQuerySTR("exec evPutPackage @Package=?,@PackType=?,@SenderCode=?");
+            
+            int lPackType = 200;            
+            
+            if("dce.main.entity.CevPlanQtysPackage".equals(pIn.getClass().getName()))
+            {
+                lPackType = 231;
+                PackGuid = ((CevPlanQtysPackage)pIn).getP10_packinf().getP12_pakageguid();
+            }
+            // 232
+            else if("dce.main.entity.CevContactsPackage".equals(pIn.getClass().getName()))
+            {
+                lPackType = 233;
+                PackGuid = ((CevContactsPackage)pIn).getP10_packinf().getP12_pakageguid();
+            }
+            else if("dce.main.entity.CevPlanDatesPackage".equals(pIn.getClass().getName()))
+            {
+                lPackType = 234;
+                PackGuid = ((CevPlanDatesPackage)pIn).getP10_packinf().getP12_pakageguid();
+            }
+            else if("dce.main.entity.CevPlanTnsfsPackage".equals(pIn.getClass().getName()))
+            {
+                lPackType = 235;
+                PackGuid = ((CevPlanTnsfsPackage)pIn).getP10_packinf().getP12_pakageguid();
+            }
+                 
+            _return.getR11_rsinf().setPakageGUIDSrc(PackGuid);
+        
+            _return.getR10_packinf().AddPakageInformation(new Date(), "9007",  UUID.randomUUID().toString());
+            
+            dbsever.getPreparedStatement().setString(1, (new CMarshalUtility()).GetMarshlStr(pIn));
+            dbsever.getPreparedStatement().setInt(2,lPackType);
+            
+            if(pkSenderCode == null || pkSenderCode.length() == 0)
+                dbsever.getPreparedStatement().setNull(3, Types.NULL); 
+            else 
+                dbsever.getPreparedStatement().setString(3,  pkSenderCode);
+            
+              
+            //WriteLog((new CMarshalUtility()).GetMarshlStr(pIn), "D:\\e1.txt");
+                                    
+            
+            ResultSet rs = dbsever.getPreparedStatement().executeQuery();            
+                
+            JAXBContext jc = JAXBContext.newInstance(dce.main.entity.CErrorFlkPack.class);
+            
+            Unmarshaller u = jc.createUnmarshaller();             
+            
+            String res_xml = "";
+            
+                        //WriteLog((new Date()).toString(), "D:\\e2.txt");
+            int pack_error = 0, iserrorrec = 0;
+            
+            while (rs.next()) 
+            {
+                res_xml = rs.getString("Result");
+                pack_error = rs.getInt("pack_error");
+                iserrorrec = rs.getInt("iserrorrec");
+                
+                break;        
+                /*
+                ++cnt;
+                IsGlobErr = rs.getInt("PackError");
+                _return.AddErrorToRecordByNzap(rs.getInt("n_zap"), _return, rs.getInt("code"), rs.getString("name"));
+                */
+            }
+              
+            try { rs.close(); } catch (Exception e) {  }
+            try { dbsever.getPreparedStatement().close(); } catch (Exception e) {  }
+            try { dbsever.getConnection().close(); } catch (Exception e) {  }
+                        
+            //WriteLog(res_xml, "D:\\e3.txt");
+                        
+            if(res_xml != null && res_xml.length() != 0)
+            {
+                StringBuffer xmlStr = new StringBuffer(res_xml);
+                CErrorFlkPack res = (CErrorFlkPack)u.unmarshal(new StreamSource(new StringReader(xmlStr.toString()))); 
+                
+                _return.getR12_orerl().setF10_orflker(res.getP10_errpack().getF10_orflker());
+
+                if(pack_error == 1)
+                {
+                    _return.getR11_rsinf().setR10_responcecode(1000);
+                    _return.getR11_rsinf().setResponceMessage(CMessageUtils.GetMsgByID(1000));
+                }
+                if(pack_error == 2)
+                {
+                    _return.getR11_rsinf().setR10_responcecode(1009);
+                    _return.getR11_rsinf().setResponceMessage(CMessageUtils.GetMsgByID(1009));
+                }
+                else if(iserrorrec != 0)
+                {
+                    _return.getR11_rsinf().setR10_responcecode(1001);
+                    _return.getR11_rsinf().setResponceMessage(CMessageUtils.GetMsgByID(1001));
+                }
+            }
+
+        }
+        catch(Exception e)
+        {
+            SaveResponceInfoToDB(CPackageInformation.CreateErrorPackage(new CResponceOrdersPackage(), 1003, PackGuid), PackGuid);
+            
+            return CPackageInformation.CreateErrorPackage(new CResponceOrdersPackage(), 1003, PackGuid);
+        }
+
+        SaveResponceInfoToDB(_return, PackGuid);
+        
+        return _return;
+    }
+    //--------------------------------------------------------------------------------------------------
     
 }   
     
