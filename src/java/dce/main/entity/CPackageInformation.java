@@ -896,6 +896,8 @@ public class CPackageInformation {
     //--------------------------------------------------------------------------------------------------
     public<T> CResponceOrdersPackage evPutPackage(T pIn) throws JAXBException
     {
+            WriteLog("evPutPackage", "C:\\e1.txt");
+
         //nzap = -1 ошибка в оформлении пакета
         String PackGuid = "", pkSenderCode = ""; 
         int zErr_Code = 0;
