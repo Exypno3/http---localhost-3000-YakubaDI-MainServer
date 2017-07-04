@@ -1420,6 +1420,22 @@
     </xs:sequence>
   </xs:complexType>
   <!-- end of getEvPlanTnsfs -->
+  
+  
+  <!-- getPlanList -->
+  <xs:complexType name="CevPlan">
+    <xs:sequence>
+      <xs:element name="rid" type="xs:int" minOccurs="0"/>
+      <xs:element name="kind" type="xs:int" minOccurs="0"/>
+      <xs:element name="year" type="xs:int" minOccurs="0"/>
+      <xs:element name="mnth" type="xs:int" minOccurs="0"/>
+      <xs:element name="code_mo" type="xs:string" minOccurs="0"/>
+      <xs:element name="dfSection" type="xs:string" minOccurs="0"/>
+      <xs:element name="p12_pr" type="tns:cPerson" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- end of getPlanInfo-->  
+      
 
   
 </xs:schema>
