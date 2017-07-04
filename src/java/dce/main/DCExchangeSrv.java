@@ -1238,7 +1238,7 @@ public class DCExchangeSrv {
     public CevPlanQtysPackage getEvPlanQtys(@WebParam(name = "username") String username, @WebParam(name = "password") String password, 
             @WebParam(name = "sendercode") String sendercode, @WebParam(name = "year") int year) {
       try{
-            return CPackageInformation.BuildPackage(new CevPlanQtysPackage(), username, password, sendercode, "", "", year, 0, "", null, 0, 0, 0);
+            return CPackageInformation.evGetPackage(new CevPlanQtysPackage(), username, password, sendercode, year);
             
         }catch(Exception e){
             return null;
@@ -1250,7 +1250,7 @@ public class DCExchangeSrv {
     @WebResult(name="orderpack")
     public CevContactsPackage getEvContacts(@WebParam(name = "username") String username, @WebParam(name = "password") String password, @WebParam(name = "sendercode") String sendercode) {
       try{
-            return CPackageInformation.BuildPackage(new CevContactsPackage(), username, password, sendercode, "", "", 0, 0, "", null, 0, 0, 0);
+            return CPackageInformation.evGetPackage(new CevContactsPackage(), username, password, sendercode, 0);
             
         }catch(Exception e){
             return null;
@@ -1262,7 +1262,7 @@ public class DCExchangeSrv {
     @WebResult(name="orderpack")
     public CevPlanDatesPackage getEvPlanDates(@WebParam(name = "username") String username, @WebParam(name = "password") String password, @WebParam(name = "sendercode") String sendercode) {
       try{
-            return CPackageInformation.BuildPackage(new CevPlanDatesPackage(), username, password, sendercode, "", "", 0, 0, "", null, 0, 0, 0);
+            return CPackageInformation.evGetPackage(new CevPlanDatesPackage(), username, password, sendercode, 0);
             
         }catch(Exception e){
             return null;
@@ -1274,7 +1274,7 @@ public class DCExchangeSrv {
     @WebMethod(operationName = "getEvPlanTnsfs")
     public CevPlanTnsfsPackage getEvPlanTnsfs(@WebParam(name = "username") String username, @WebParam(name = "password") String password, @WebParam(name = "sendercode") String sendercode) {
       try{
-            return CPackageInformation.BuildPackage(new CevPlanTnsfsPackage(), username, password, sendercode, "", "", 0, 0, "", null, 0, 0, 0);
+            return CPackageInformation.evGetPackage(new CevPlanTnsfsPackage(), username, password, sendercode, 0);
             
         }catch(Exception e){
             return null;

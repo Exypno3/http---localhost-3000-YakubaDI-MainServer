@@ -1023,17 +1023,6 @@
     </operation>
     <!-- end of getEvContacts -->
 
-    <!-- putEvContacts -->
-    <operation name="putEvContacts">
-      <soap:operation soapAction=""/>
-      <input>
-        <soap:body use="literal"/>
-      </input>
-      <output>
-        <soap:body use="literal"/>
-      </output>
-    </operation>
-    <!-- end of putEvContacts -->
 
     <!-- getEvPlanDates -->
     <operation name="getEvPlanDates">

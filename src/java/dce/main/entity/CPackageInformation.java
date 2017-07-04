@@ -610,27 +610,6 @@ public class CPackageInformation {
                 PackType = 110;
                 jc = JAXBContext.newInstance(dce.main.entity.CDeAttachQueryForMOPackage.class);
             }
-            else if(param.getClass().getName() == "dce.main.entity.CevPlanQtysPackage")
-            {
-                PackType = 231;
-                jc = JAXBContext.newInstance(dce.main.entity.CevPlanQtysPackage.class);
-            }
-            /// 232
-            else if(param.getClass().getName() == "dce.main.entity.CevContactsPackage")
-            {
-                PackType = 233; 
-                jc = JAXBContext.newInstance(dce.main.entity.CevContactsPackage.class);
-            }
-            else if(param.getClass().getName() == "dce.main.entity.CevPlanDatesPackage")
-            {
-                PackType = 234; 
-                jc = JAXBContext.newInstance(dce.main.entity.CevPlanDatesPackage.class);
-            }
-            else if(param.getClass().getName() == "dce.main.entity.CevPlanTnsfsPackage")
-            {
-                PackType = 235; 
-                jc = JAXBContext.newInstance(dce.main.entity.CevPlanTnsfsPackage.class);
-            }
             
             ///////////////////////////////////////////////////////////////////////////////////
             if(PackType == 109)
@@ -720,16 +699,7 @@ public class CPackageInformation {
            
             Unmarshaller u = jc.createUnmarshaller();
             StringBuffer xmlStr = new StringBuffer(res_xml);
-            StringReader sr = new StringReader(xmlStr.toString());
-            StreamSource ss = new StreamSource(sr);
-            T res = (T)u.unmarshal(ss);  
-            //T res = (T)u.unmarshal(new StreamSource(new StringReader(xmlStr.toString())));  
-            //WriteLog(xmlStr.toString(), "C:\\Ev.xml");
-            //if(PackType==231){
-            //    dce.main.entity.CevPlanQtysPackage res2 = (CevPlanQtysPackage)res;
-            //    WriteLog(Integer.toString(res2.getEvPlanQtys().getEvPlanQtys()[0].getId()),"C:\\EvId.log");
-            //}
-            
+            T res = (T)u.unmarshal(new StreamSource(new StringReader(xmlStr.toString())));  
             
             return res;
             
@@ -851,8 +821,81 @@ public class CPackageInformation {
         catch(Exception e){return null;}
         
     }
-}   
     //--------------------------------------------------------------------------------------------------
+    public static <T> T evGetPackage(T param, String username, String password, String sendercode, int yearCode)
+    {
+        try{
+            int _res = CDBSever.CheckUserForAccess(username, password, sendercode);
+            
+            if(_res == 0)
+                return CreateErrorPackage(param, 1002, ""); 
+            else if(_res == -1)
+                return CreateErrorPackage(param, 3000, ""); 
+              
+            JAXBContext jc = null;
+            int PackType = 0;
+
+            ///////////////////////////////////////////////////////////////////
+            if(param.getClass().getName() == "dce.main.entity.CevPlanQtysPackage")
+            {
+                PackType = 231;
+                jc = JAXBContext.newInstance(dce.main.entity.CevPlanQtysPackage.class);
+            }
+            /// 232
+            else if(param.getClass().getName() == "dce.main.entity.CevContactsPackage")
+            {
+                PackType = 233; 
+                jc = JAXBContext.newInstance(dce.main.entity.CevContactsPackage.class);
+            }
+            else if(param.getClass().getName() == "dce.main.entity.CevPlanDatesPackage")
+            {
+                PackType = 234; 
+                jc = JAXBContext.newInstance(dce.main.entity.CevPlanDatesPackage.class);
+            }
+            else if(param.getClass().getName() == "dce.main.entity.CevPlanTnsfsPackage")
+            {
+                PackType = 235; 
+                jc = JAXBContext.newInstance(dce.main.entity.CevPlanTnsfsPackage.class);
+            }
+            
+            ///////////////////////////////////////////////////////////////////////////////////
+            CDBSever dbsever = new CDBSever(IConfigConstantsList.ConfMsgList[0], IConfigConstantsList.ConfMsgList[1]);
+            dbsever.setQuerySTR("set dateformat dmy exec evGetPackage @PackType=?, @SenderCode=?, @YearCode=?");
+            dbsever.getPreparedStatement().setInt(1,PackType);
+            dbsever.getPreparedStatement().setString(2, sendercode);
+            
+            if(yearCode == 0)
+                dbsever.getPreparedStatement().setNull(3, Types.NULL); 
+            else 
+                dbsever.getPreparedStatement().setInt(3,  yearCode);
+            
+            String res_xml = "";
+            ResultSet rs = dbsever.getPreparedStatement().executeQuery();
+           
+            while (rs.next()) 
+            {
+                res_xml = rs.getString("result");
+                break;
+            }
+            
+            try { rs.close(); } catch (Exception e) {  }
+            try { dbsever.getPreparedStatement().close(); } catch (Exception e) {  }
+            try { dbsever.getConnection().close(); } catch (Exception e) {  }
+           
+            Unmarshaller u = jc.createUnmarshaller();
+            StringBuffer xmlStr = new StringBuffer(res_xml);
+            T res = (T)u.unmarshal(new StreamSource(new StringReader(xmlStr.toString())));  
+            
+            return res;
+            
+        }catch(Exception e){
+            return null;
+        }
+    }
+    //--------------------------------------------------------------------------------------------------
+    
+}   
+    
  /*   
     public static void main(String[] args) {
         

@@ -1314,7 +1314,6 @@
   </xs:complexType>
   <!-- end of getEvContacts -->
   
-  <!--  cEvResponcePackage -->
   <xs:complexType name="cEvResponcePackage">
     <xs:sequence>
       <xs:element name="r10_packinf" type="tns:cPackageInformation" minOccurs="0"/>
@@ -1322,7 +1321,6 @@
       <xs:element name="r12_orerl" type="tns:cOrdersErrorList" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
-  <!--  end of cEvResponcePackage -->
 
   
   <!-- putEvContacts -->
