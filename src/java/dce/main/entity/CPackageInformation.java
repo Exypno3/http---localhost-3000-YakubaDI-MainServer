@@ -942,7 +942,7 @@ public class CPackageInformation {
                 dbsever.getPreparedStatement().setString(3,  pkSenderCode);
             
               
-            //WriteLog((new CMarshalUtility()).GetMarshlStr(pIn), "D:\\e1.txt");
+            WriteLog((new CMarshalUtility()).GetMarshlStr(pIn), "C:\\e1.txt");
                                     
             
             ResultSet rs = dbsever.getPreparedStatement().executeQuery();            
