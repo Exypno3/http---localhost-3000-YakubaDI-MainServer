@@ -943,7 +943,7 @@ public class CPackageInformation {
             
               
             //WriteLog((new CMarshalUtility()).GetMarshlStr(pIn), "C:\\e1.txt");
-            WriteLog(Integer.toString(lPackType), "C:\\e1.txt");
+            //WriteLog(Integer.toString(lPackType), "C:\\e1.txt");
 
             
             ResultSet rs = dbsever.getPreparedStatement().executeQuery();            
