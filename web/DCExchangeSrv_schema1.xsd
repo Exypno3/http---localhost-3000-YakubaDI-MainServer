@@ -1254,7 +1254,7 @@
   </xs:complexType>
   <xs:complexType name="CevPlanQuantity">
     <xs:sequence>
-      <xs:element name="id" type="xs:int" minOccurs="0"/>
+      <xs:element name="rid" type="xs:int" minOccurs="0"/>
       <xs:element name="kind" type="xs:int" minOccurs="0"/>
       <xs:element name="year" type="xs:int" minOccurs="0"/>
       <xs:element name="mnth" type="xs:int" minOccurs="0"/>
@@ -1294,7 +1294,7 @@
   </xs:complexType>
   <xs:complexType name="CevContact">
     <xs:sequence>
-      <xs:element name="id" type="xs:int" minOccurs="0"/>
+      <xs:element name="rid" type="xs:int" minOccurs="0"/>
       <xs:element name="code_mo" type="xs:string" minOccurs="0"/>
       <xs:element name="phone" type="xs:string" minOccurs="0"/>
       <xs:element name="comment" type="xs:string" minOccurs="0"/>
@@ -1361,7 +1361,7 @@
   </xs:complexType>
   <xs:complexType name="CevPlanDate">
     <xs:sequence>
-      <xs:element name="id" type="xs:int" minOccurs="0"/>
+      <xs:element name="rid" type="xs:int" minOccurs="0"/>
       <xs:element name="code_mo" type="xs:string" minOccurs="0"/>
       <xs:element name="kind" type="xs:int" minOccurs="0"/>
       <xs:element name="evntdate" type="xs:dateTime" minOccurs="0"/>
@@ -1399,7 +1399,7 @@
   </xs:complexType>
   <xs:complexType name="CevPlanTnsf">
     <xs:sequence>
-      <xs:element name="id" type="xs:int" minOccurs="0"/>
+      <xs:element name="rid" type="xs:int" minOccurs="0"/>
       <xs:element name="code_mo" type="xs:string" minOccurs="0"/>
       <xs:element name="kind" type="xs:int" minOccurs="0"/>
       <xs:element name="tnsfsdate" type="xs:dateTime" minOccurs="0"/>

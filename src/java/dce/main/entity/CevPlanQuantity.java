@@ -9,25 +9,25 @@ import javax.xml.bind.annotation.XmlType;
  *
  * @author YakubaDI
  */
-@XmlType(propOrder = {"id","kind","year","mnth","code_mo","quantity"})
+@XmlType(propOrder = {"rid","kind","year","mnth","code_mo","quantity"})
 public class CevPlanQuantity {
-    private int id;
+    private int rid;
     private int kind;
     private int year;
     private int mnth;
     private String code_mo;
     private int quantity;
 
-    public int getId() {
-        return this.id;
+    public int getRid() {
+        return rid;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setRid(int rid) {
+        this.rid = rid;
     }
 
     public int getKind() {
-        return this.kind;
+        return kind;
     }
 
     public void setKind(int kind) {
@@ -35,7 +35,7 @@ public class CevPlanQuantity {
     }
 
     public int getYear() {
-        return this.year;
+        return year;
     }
 
     public void setYear(int year) {
@@ -43,7 +43,7 @@ public class CevPlanQuantity {
     }
 
     public int getMnth() {
-        return this.mnth;
+        return mnth;
     }
 
     public void setMnth(int mnth) {
@@ -51,7 +51,7 @@ public class CevPlanQuantity {
     }
 
     public String getCode_mo() {
-        return this.code_mo;
+        return code_mo;
     }
 
     public void setCode_mo(String code_mo) {
@@ -59,12 +59,13 @@ public class CevPlanQuantity {
     }
 
     public int getQuantity() {
-        return this.quantity;
+        return quantity;
     }
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
     
     
 }

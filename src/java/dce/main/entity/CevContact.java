@@ -9,19 +9,19 @@ import javax.xml.bind.annotation.XmlType;
  *
  * @author YakubaDI
  */
-@XmlType(propOrder = {"id","code_mo","phone","comment"})
+@XmlType(propOrder = {"rid","code_mo","phone","comment"})
 public class CevContact {
-    private int id;
+    private int rid;
     private String code_mo;
     private String phone;
     private String comment;
 
-    public int getId() {
-        return id;
+    public int getRid() {
+        return rid;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setRid(int rid) {
+        this.rid = rid;
     }
 
     public String getCode_mo() {
@@ -47,6 +47,7 @@ public class CevContact {
     public void setComment(String comment) {
         this.comment = comment;
     }
+
     
     
 }
