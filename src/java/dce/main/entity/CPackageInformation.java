@@ -896,7 +896,6 @@ public class CPackageInformation {
     //--------------------------------------------------------------------------------------------------
     public<T> CResponceOrdersPackage evPutPackage(T pIn) throws JAXBException
     {
-            WriteLog("evPutPackage", "C:\\e1.txt");
 
         //nzap = -1 ошибка в оформлении пакета
         String PackGuid = "", pkSenderCode = ""; 
@@ -1006,6 +1005,8 @@ public class CPackageInformation {
         }
         catch(Exception e)
         {
+            WriteLog(e.toString(), "C:\\exception.txt");
+            
             SaveResponceInfoToDB(CPackageInformation.CreateErrorPackage(new CResponceOrdersPackage(), 1003, PackGuid), PackGuid);
             
             return CPackageInformation.CreateErrorPackage(new CResponceOrdersPackage(), 1003, PackGuid);
