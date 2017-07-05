@@ -11,12 +11,12 @@ import javax.xml.bind.annotation.XmlType;
  *
  * @author YakubaDI
  */
-@XmlType(propOrder = {"rid","code_mo","kind","tnsfdate","tnsftype","address"})
+@XmlType(propOrder = {"rid","code_mo","kind","evntdate","tnsftype","address"})
 public class CevPlanTnsf {
     private int rid;
     private String code_mo;
     private int kind;
-    private Date tnsfdate = null;
+    private Date evntdate = null;
     private int tnsftype;
     private String address;
 
@@ -44,12 +44,12 @@ public class CevPlanTnsf {
         this.kind = kind;
     }
 
-    public Date getTnsfdate() {
-        return tnsfdate;
+    public Date getEvntdate() {
+        return evntdate;
     }
 
-    public void setTnsfdate(Date tnsfdate) {
-        this.tnsfdate = tnsfdate;
+    public void setEvntdate(Date evntdate) {
+        this.evntdate = evntdate;
     }
 
     public int getTnsftype() {
@@ -67,6 +67,7 @@ public class CevPlanTnsf {
     public void setAddress(String address) {
         this.address = address;
     }
+
 
 
     

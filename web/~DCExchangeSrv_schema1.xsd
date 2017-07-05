@@ -1400,7 +1400,7 @@
       <xs:element name="id" type="xs:int" minOccurs="0"/>
       <xs:element name="code_mo" type="xs:string" minOccurs="0"/>
       <xs:element name="kind" type="xs:int" minOccurs="0"/>
-      <xs:element name="tnsfsdate" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="evntdate" type="xs:dateTime" minOccurs="0"/>
       <xs:element name="tnsftype" type="xs:int" minOccurs="0"/>
       <xs:element name="address" type="xs:string" minOccurs="0"/>
     </xs:sequence>
