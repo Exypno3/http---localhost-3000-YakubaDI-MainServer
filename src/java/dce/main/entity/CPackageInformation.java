@@ -909,13 +909,14 @@ public class CPackageInformation {
             
             int lPackType = 200;            
             
-            if("dce.main.entity.CevPlanQtysPackage".equals(pIn.getClass().getName()))
+            /*if("dce.main.entity.CevPlanQtysPackage".equals(pIn.getClass().getName()))
             {
                 lPackType = 231;
                 PackGuid = ((CevPlanQtysPackage)pIn).getP10_packinf().getP12_pakageguid();
             }
-            // 232
-            else if("dce.main.entity.CevContactsPackage".equals(pIn.getClass().getName()))
+            */
+            // 232  else 
+            if("dce.main.entity.CevContactsPackage".equals(pIn.getClass().getName()))
             {
                 lPackType = 233;
                 PackGuid = ((CevContactsPackage)pIn).getP10_packinf().getP12_pakageguid();
@@ -948,9 +949,6 @@ public class CPackageInformation {
             */
               
             //WriteLog((new CMarshalUtility()).GetMarshlStr(pIn), "C:\\e.txt");
-            String cmnt = ((CevContactsPackage)pIn).getEvContacts().getEvContact()[0].getComment();
-            WriteLog(cmnt, "C:\\e.txt");
-            //WriteLog(Integer.toString(lPackType), "C:\\e1.txt");
 
             
             ResultSet rs = dbsever.getPreparedStatement().executeQuery();            
@@ -961,7 +959,6 @@ public class CPackageInformation {
             
             String res_xml = "";
             
-                        //WriteLog((new Date()).toString(), "D:\\e2.txt");
             int pack_error = 0, iserrorrec = 0;
             
             while (rs.next()) 
@@ -982,7 +979,7 @@ public class CPackageInformation {
             try { dbsever.getPreparedStatement().close(); } catch (Exception e) {  }
             try { dbsever.getConnection().close(); } catch (Exception e) {  }
                         
-            //WriteLog(res_xml, "C:\\e.txt");
+            //WriteLog(res_xml, "C:\\res_xml.txt");
                         
             if(res_xml != null && res_xml.length() != 0)
             {

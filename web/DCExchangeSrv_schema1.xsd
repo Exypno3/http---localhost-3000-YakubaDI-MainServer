@@ -1338,7 +1338,7 @@
   </xs:complexType>
   <xs:complexType name="putEvContactsResponse">
     <xs:sequence>
-      <xs:element name="responcepack" type="tns:cEvResponcePackage" minOccurs="0"/>
+      <xs:element name="responcepack" type="tns:cResponceOrdersPackage" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
   <!-- end of putEvContacts -->
@@ -1382,6 +1382,25 @@
   </xs:complexType>
   <!-- end of getEvPlanDates -->
 
+
+  <!-- putEvPlanDates -->
+  <xs:element name="putEvPlanDates" type="tns:putEvPlanDates"/>
+  <xs:element name="putEvPlanDatesResponse" type="tns:putEvPlanDatesResponse"/>
+  <xs:complexType name="putEvPlanDates">
+    <xs:sequence>
+      <xs:element name="orderpack" type="tns:CevPlanDatesPackage" minOccurs="0"/>
+      <xs:element name="username" type="xs:string" minOccurs="0"/>
+      <xs:element name="password" type="xs:string" minOccurs="0"/>
+      <xs:element name="sendercode" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="putEvPlanDatesResponse">
+    <xs:sequence>
+      <xs:element name="responcepack" type="tns:cResponceOrdersPackage" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- end of putEvPlanDates -->
+
   
   <!-- getEvPlanTnsfs -->
   <xs:element name="getEvPlanTnsfs" type="tns:getEvPlanTnsfs"/>
@@ -1420,6 +1439,24 @@
     </xs:sequence>
   </xs:complexType>
   <!-- end of getEvPlanTnsfs -->
+  
+  <!-- putEvPlanTnsfs -->
+  <xs:element name="putEvPlanTnsfs" type="tns:putEvPlanTnsfs"/>
+  <xs:element name="putEvPlanTnsfsResponse" type="tns:putEvPlanTnsfsResponse"/>
+  <xs:complexType name="putEvPlanTnsfs">
+    <xs:sequence>
+      <xs:element name="orderpack" type="tns:CevPlanTnsfsPackage" minOccurs="0"/>
+      <xs:element name="username" type="xs:string" minOccurs="0"/>
+      <xs:element name="password" type="xs:string" minOccurs="0"/>
+      <xs:element name="sendercode" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="putEvPlanTnsfsResponse">
+    <xs:sequence>
+      <xs:element name="responcepack" type="tns:cResponceOrdersPackage" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- end of putEvPlanTnsfs -->
   
   
   <!-- getPlanList -->

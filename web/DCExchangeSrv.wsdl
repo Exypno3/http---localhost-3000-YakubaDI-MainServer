@@ -326,6 +326,16 @@
     <part name="parameters" element="tns:getEvPlanDatesResponse"/>
   </message>
   <!-- end of getEvPlanDates -->
+  
+  <!-- putEvPlanDates -->
+  <message name="putEvPlanDates">
+    <part name="parameters" element="tns:putEvPlanDates"/>
+  </message>
+  <message name="putEvPlanDatesResponse">
+    <part name="parameters" element="tns:putEvPlanDatesResponse"/>
+  </message>
+  <!-- end of putEvPlanDates -->
+  
 
     <!-- getEvPlanTnsfs -->
   <message name="getEvPlanTnsfs">
@@ -336,6 +346,14 @@
   </message>
   <!-- end of getEvPlanTnsfs -->
 
+  <!-- putEvPlanTnsfs -->
+  <message name="putEvPlanTnsfs">
+    <part name="parameters" element="tns:putEvPlanTnsfs"/>
+  </message>
+  <message name="putEvPlanTnsfsResponse">
+    <part name="parameters" element="tns:putEvPlanTnsfsResponse"/>
+  </message>
+  <!-- end of putEvPlanTnsfs -->
   
   
   <portType name="DCExchangeSrv">
@@ -558,6 +576,14 @@
       <output wsam:Action="http://main.dce/DCExchangeSrv/getEvPlanDatesResponse" message="tns:getEvPlanDatesResponse"/>
     </operation>
     <!-- end of getEvPlanDates -->
+    
+    <!-- putEvPlanDates -->
+    <operation name="putEvPlanDates">
+      <input wsam:Action="http://main.dce/DCExchangeSrv/putEvPlanDatesRequest" message="tns:putEvPlanDates"/>
+      <output wsam:Action="http://main.dce/DCExchangeSrv/putEvPlanDatesResponse" message="tns:putEvPlanDatesResponse"/>
+    </operation>
+    <!-- end of putEvPlanDates -->
+    
 
     <!-- getEvPlanTsnfs -->
     <operation name="getEvPlanTnsfs">
@@ -565,6 +591,13 @@
       <output wsam:Action="http://main.dce/DCExchangeSrv/getEvPlanTnsfsResponse" message="tns:getEvPlanTnsfsResponse"/>
     </operation>
     <!-- end of getEvPlanTsnfs -->
+
+    <!-- putEvPlanTnsfs -->
+    <operation name="putEvPlanTnsfs">
+      <input wsam:Action="http://main.dce/DCExchangeSrv/putEvPlanTnsfsRequest" message="tns:putEvPlanTnsfs"/>
+      <output wsam:Action="http://main.dce/DCExchangeSrv/putEvPlanTnsfsResponse" message="tns:putEvPlanTnsfsResponse"/>
+    </operation>
+    <!-- end of putEvPlanTnsfs -->
 
 
   </portType>
@@ -1046,6 +1079,19 @@
       </output>
     </operation>
     <!-- end of getEvPlanDates -->
+    
+    <!-- putEvPlanDates -->
+    <operation name="putEvPlanDates">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <!-- end of putEvPlanDates -->
+    
 
     <!-- getEvPlanTsnfs -->
     <operation name="getEvPlanTnsfs">
@@ -1059,6 +1105,17 @@
     </operation>
     <!-- end of getEvPlanTsnfs -->
 
+    <!-- putEvPlanTnsfs -->
+    <operation name="putEvPlanTnsfs">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <!-- end of putEvPlanTnsfs -->
     
   </binding>
   <service name="DCExchangeSrv">
