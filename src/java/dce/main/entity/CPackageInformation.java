@@ -905,7 +905,7 @@ public class CPackageInformation {
         try
         {
             CDBSever dbsever = new CDBSever(IConfigConstantsList.ConfMsgList[0], IConfigConstantsList.ConfMsgList[1]);
-            dbsever.setQuerySTR("exec evPutPackage @Package=?,@PackType=?,@SenderCode=?");
+            dbsever.setQuerySTR("exec evPutPackage @Package=?,@PackType=?");
             
             int lPackType = 200;            
             
@@ -938,11 +938,12 @@ public class CPackageInformation {
             dbsever.getPreparedStatement().setString(1, (new CMarshalUtility()).GetMarshlStr(pIn));
             dbsever.getPreparedStatement().setInt(2,lPackType);
             
+           /*
             if(pkSenderCode == null || pkSenderCode.length() == 0)
                 dbsever.getPreparedStatement().setNull(3, Types.NULL); 
             else 
                 dbsever.getPreparedStatement().setString(3,  pkSenderCode);
-            
+            */
               
             //WriteLog((new CMarshalUtility()).GetMarshlStr(pIn), "C:\\e1.txt");
             //WriteLog(Integer.toString(lPackType), "C:\\e1.txt");
@@ -1006,7 +1007,7 @@ public class CPackageInformation {
         }
         catch(Exception e)
         {
-            WriteLog(e.toString(), "C:\\e.txt");
+            //WriteLog(e.toString(), "C:\\e.txt");
             
             SaveResponceInfoToDB(CPackageInformation.CreateErrorPackage(new CResponceOrdersPackage(), 1003, PackGuid), PackGuid);
             
