@@ -109,19 +109,19 @@ public class CMarshalUtility {
             {
                 context = JAXBContext.newInstance(dce.main.entity.CDeAttachQueryForMOPackage.class);
             }
-            else if("dce.main.entity.CEvPlanQtysPackage".equals(param.getClass().getName()))
+            else if("dce.main.entity.CevPlanQtysPackage".equals(param.getClass().getName()))
             {
                 context = JAXBContext.newInstance(dce.main.entity.CevPlanQtysPackage.class);
             }
-            else if("dce.main.entity.CEvContactsPackage".equals(param.getClass().getName()))
+            else if("dce.main.entity.CevContactsPackage".equals(param.getClass().getName()))
             {
                 context = JAXBContext.newInstance(dce.main.entity.CevContactsPackage.class);
             }
-            else if("dce.main.entity.CEvPlanDatesPackage".equals(param.getClass().getName()))
+            else if("dce.main.entity.CevPlanDatesPackage".equals(param.getClass().getName()))
             {
                 context = JAXBContext.newInstance(dce.main.entity.CevPlanDatesPackage.class);
             }
-            else if("dce.main.entity.CEvPlanTnsfsPackage".equals(param.getClass().getName()))
+            else if("dce.main.entity.CevPlanTnsfsPackage".equals(param.getClass().getName()))
             {
                 context = JAXBContext.newInstance(dce.main.entity.CevPlanTnsfsPackage.class);
             }
