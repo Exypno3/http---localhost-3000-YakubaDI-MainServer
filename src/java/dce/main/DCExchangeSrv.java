@@ -1270,17 +1270,6 @@ public class DCExchangeSrv {
     }
 
     //------------------------------------------------------------------------------------------------------------------------------
-    @WebResult(name="orderpack")
-    @WebMethod(operationName = "getEvPlanTnsfs")
-    public CevPlanTnsfsPackage getEvPlanTnsfs(@WebParam(name = "username") String username, @WebParam(name = "password") String password, @WebParam(name = "sendercode") String sendercode) {
-      try{
-            return CPackageInformation.evGetPackage(new CevPlanTnsfsPackage(), username, password, sendercode, 0);
-            
-        }catch(Exception e){
-            return null;
-        }    
-    }
-    //------------------------------------------------------------------------------------------------------------------------------
     @WebMethod(operationName = "putEvContacts")
     @WebResult(name="responcepack")
     public CResponceOrdersPackage putEvContacts(@WebParam(name = "orderpack") CevContactsPackage pinppack,

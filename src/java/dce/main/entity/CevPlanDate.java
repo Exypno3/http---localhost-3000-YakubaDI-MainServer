@@ -10,13 +10,15 @@ import javax.xml.bind.annotation.XmlType;
  *
  * @author YakubaDI
  */
-@XmlType(propOrder = {"rid","code_mo","kind","evntdate","comment"})
+@XmlType(propOrder = {"rid","code_mo","kind","evdt","meth","comment","address"})
 public class CevPlanDate {
     private int rid;
     private String code_mo;
     private int kind;
-    private Date evntdate = null;
+    private Date evdt = null;
+    private int meth;
     private String comment;
+    private String address;
 
     public int getRid() {
         return rid;
@@ -42,12 +44,20 @@ public class CevPlanDate {
         this.kind = kind;
     }
 
-    public Date getEvntdate() {
-        return evntdate;
+    public Date getEvdt() {
+        return evdt;
     }
 
-    public void setEvntdate(Date evntdate) {
-        this.evntdate = evntdate;
+    public void setEvdt(Date evdt) {
+        this.evdt = evdt;
+    }
+
+    public int getMeth() {
+        return meth;
+    }
+
+    public void setMeth(int meth) {
+        this.meth = meth;
     }
 
     public String getComment() {
@@ -58,7 +68,14 @@ public class CevPlanDate {
         this.comment = comment;
     }
 
+    public String getAddress() {
+        return address;
+    }
 
-    
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+ 
     
 }

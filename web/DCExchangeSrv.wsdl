@@ -337,25 +337,6 @@
   <!-- end of putEvPlanDates -->
   
 
-    <!-- getEvPlanTnsfs -->
-  <message name="getEvPlanTnsfs">
-    <part name="parameters" element="tns:getEvPlanTnsfs"/>
-  </message>
-  <message name="getEvPlanTnsfsResponse">
-    <part name="parameters" element="tns:getEvPlanTnsfsResponse"/>
-  </message>
-  <!-- end of getEvPlanTnsfs -->
-
-  <!-- putEvPlanTnsfs -->
-  <message name="putEvPlanTnsfs">
-    <part name="parameters" element="tns:putEvPlanTnsfs"/>
-  </message>
-  <message name="putEvPlanTnsfsResponse">
-    <part name="parameters" element="tns:putEvPlanTnsfsResponse"/>
-  </message>
-  <!-- end of putEvPlanTnsfs -->
-  
-  
   <portType name="DCExchangeSrv">
     <operation name="SendAttachDoctorSectionInformation">
       <input wsam:Action="http://main.dce/DCExchangeSrv/SendAttachDoctorSectionInformationRequest" message="tns:SendAttachDoctorSectionInformation"/>
@@ -584,20 +565,6 @@
     </operation>
     <!-- end of putEvPlanDates -->
     
-
-    <!-- getEvPlanTsnfs -->
-    <operation name="getEvPlanTnsfs">
-      <input wsam:Action="http://main.dce/DCExchangeSrv/getEvPlanTnsfsRequest" message="tns:getEvPlanTnsfs"/>
-      <output wsam:Action="http://main.dce/DCExchangeSrv/getEvPlanTnsfsResponse" message="tns:getEvPlanTnsfsResponse"/>
-    </operation>
-    <!-- end of getEvPlanTsnfs -->
-
-    <!-- putEvPlanTnsfs -->
-    <operation name="putEvPlanTnsfs">
-      <input wsam:Action="http://main.dce/DCExchangeSrv/putEvPlanTnsfsRequest" message="tns:putEvPlanTnsfs"/>
-      <output wsam:Action="http://main.dce/DCExchangeSrv/putEvPlanTnsfsResponse" message="tns:putEvPlanTnsfsResponse"/>
-    </operation>
-    <!-- end of putEvPlanTnsfs -->
 
 
   </portType>
@@ -1093,30 +1060,6 @@
     <!-- end of putEvPlanDates -->
     
 
-    <!-- getEvPlanTsnfs -->
-    <operation name="getEvPlanTnsfs">
-      <soap:operation soapAction=""/>
-      <input>
-        <soap:body use="literal"/>
-      </input>
-      <output>
-        <soap:body use="literal"/>
-      </output>
-    </operation>
-    <!-- end of getEvPlanTsnfs -->
-
-    <!-- putEvPlanTnsfs -->
-    <operation name="putEvPlanTnsfs">
-      <soap:operation soapAction=""/>
-      <input>
-        <soap:body use="literal"/>
-      </input>
-      <output>
-        <soap:body use="literal"/>
-      </output>
-    </operation>
-    <!-- end of putEvPlanTnsfs -->
-    
   </binding>
   <service name="DCExchangeSrv">
     <port name="DCExchangeSrvPort" binding="tns:DCExchangeSrvPortBinding">

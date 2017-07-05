@@ -1364,8 +1364,10 @@
       <xs:element name="rid" type="xs:int" minOccurs="0"/>
       <xs:element name="code_mo" type="xs:string" minOccurs="0"/>
       <xs:element name="kind" type="xs:int" minOccurs="0"/>
-      <xs:element name="evntdate" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="evdt" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="meth" type="xs:int" minOccurs="0"/>
       <xs:element name="comment" type="xs:string" minOccurs="0"/>
+      <xs:element name="address" type="xs:string" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="getEvPlanDates">
@@ -1401,63 +1403,6 @@
   </xs:complexType>
   <!-- end of putEvPlanDates -->
 
-  
-  <!-- getEvPlanTnsfs -->
-  <xs:element name="getEvPlanTnsfs" type="tns:getEvPlanTnsfs"/>
-  <xs:element name="getEvPlanTnsfsResponse" type="tns:getEvPlanTnsfsResponse"/>
-  <xs:complexType name="CevPlanTnsfsPackage">
-    <xs:sequence>
-      <xs:element name="p10_packinf" type="tns:cPackageInformation" minOccurs="0"/>
-      <xs:element name="evPlanTnsfs" type="tns:CevPlanTnsfs" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="CevPlanTnsfs">
-    <xs:sequence>
-      <xs:element name="evPlanTnsf" type="tns:CevPlanTnsf" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="CevPlanTnsf">
-    <xs:sequence>
-      <xs:element name="rid" type="xs:int" minOccurs="0"/>
-      <xs:element name="code_mo" type="xs:string" minOccurs="0"/>
-      <xs:element name="kind" type="xs:int" minOccurs="0"/>
-      <xs:element name="evntdate" type="xs:dateTime" minOccurs="0"/>
-      <xs:element name="tnsftype" type="xs:int" minOccurs="0"/>
-      <xs:element name="address" type="xs:string" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="getEvPlanTnsfs">
-    <xs:sequence>
-      <xs:element name="username" type="xs:string" minOccurs="0"/>
-      <xs:element name="password" type="xs:string" minOccurs="0"/>
-      <xs:element name="sendercode" type="xs:string" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="getEvPlanTnsfsResponse">
-    <xs:sequence>
-      <xs:element name="orderpack" type="tns:CevPlanTnsfsPackage" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-  <!-- end of getEvPlanTnsfs -->
-  
-  <!-- putEvPlanTnsfs -->
-  <xs:element name="putEvPlanTnsfs" type="tns:putEvPlanTnsfs"/>
-  <xs:element name="putEvPlanTnsfsResponse" type="tns:putEvPlanTnsfsResponse"/>
-  <xs:complexType name="putEvPlanTnsfs">
-    <xs:sequence>
-      <xs:element name="orderpack" type="tns:CevPlanTnsfsPackage" minOccurs="0"/>
-      <xs:element name="username" type="xs:string" minOccurs="0"/>
-      <xs:element name="password" type="xs:string" minOccurs="0"/>
-      <xs:element name="sendercode" type="xs:string" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="putEvPlanTnsfsResponse">
-    <xs:sequence>
-      <xs:element name="responcepack" type="tns:cResponceOrdersPackage" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-  <!-- end of putEvPlanTnsfs -->
-  
   
   <!-- getPlanList -->
   <xs:complexType name="CevPlan">

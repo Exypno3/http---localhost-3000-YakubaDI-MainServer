@@ -852,11 +852,6 @@ public class CPackageInformation {
                 PackType = 234; 
                 jc = JAXBContext.newInstance(dce.main.entity.CevPlanDatesPackage.class);
             }
-            else if(param.getClass().getName() == "dce.main.entity.CevPlanTnsfsPackage")
-            {
-                PackType = 235; 
-                jc = JAXBContext.newInstance(dce.main.entity.CevPlanTnsfsPackage.class);
-            }
             
             ///////////////////////////////////////////////////////////////////////////////////
             CDBSever dbsever = new CDBSever(IConfigConstantsList.ConfMsgList[0], IConfigConstantsList.ConfMsgList[1]);
@@ -926,11 +921,6 @@ public class CPackageInformation {
             {
                 lPackType = 234;
                 PackGuid = ((CevPlanDatesPackage)pIn).getP10_packinf().getP12_pakageguid();
-            }
-            else if("dce.main.entity.CevPlanTnsfsPackage".equals(pIn.getClass().getName()))
-            {
-                lPackType = 235;
-                PackGuid = ((CevPlanTnsfsPackage)pIn).getP10_packinf().getP12_pakageguid();
             }
                  
             _return.getR11_rsinf().setPakageGUIDSrc(PackGuid);
