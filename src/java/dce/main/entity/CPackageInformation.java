@@ -919,7 +919,7 @@ public class CPackageInformation {
             {
                 lPackType = 233;
                 PackGuid = ((CevContactsPackage)pIn).getP10_packinf().getP12_pakageguid();
-                pkSenderCode = ((COrderNullificationPackage)pIn).getP10_packinf().getP11_pakagesender();                
+                pkSenderCode = ((CevContactsPackage)pIn).getP10_packinf().getP11_pakagesender();                
             }
             else if("dce.main.entity.CevPlanDatesPackage".equals(pIn.getClass().getName()))
             {
