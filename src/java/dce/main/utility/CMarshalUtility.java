@@ -113,6 +113,18 @@ public class CMarshalUtility {
             {
                 context = JAXBContext.newInstance(dce.main.entity.CevPlanQtysPackage.class);
             }
+            else if("dce.main.entity.CEvContactsPackage".equals(param.getClass().getName()))
+            {
+                context = JAXBContext.newInstance(dce.main.entity.CevContactsPackage.class);
+            }
+            else if("dce.main.entity.CEvPlanDatesPackage".equals(param.getClass().getName()))
+            {
+                context = JAXBContext.newInstance(dce.main.entity.CevPlanDatesPackage.class);
+            }
+            else if("dce.main.entity.CEvPlanTnsfsPackage".equals(param.getClass().getName()))
+            {
+                context = JAXBContext.newInstance(dce.main.entity.CevPlanTnsfsPackage.class);
+            }
             
             
             Marshaller m = context.createMarshaller();
