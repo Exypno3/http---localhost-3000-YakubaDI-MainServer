@@ -948,7 +948,8 @@ public class CPackageInformation {
             */
               
             //WriteLog((new CMarshalUtility()).GetMarshlStr(pIn), "C:\\e.txt");
-            WriteLog(pkSenderCode, "C:\\e.txt");
+            String cmnt = ((CevContactsPackage)pIn).getEvContacts().getEvContact()[0].getComment();
+            WriteLog(cmnt, "C:\\e.txt");
             //WriteLog(Integer.toString(lPackType), "C:\\e1.txt");
 
             
