@@ -945,7 +945,7 @@ public class CPackageInformation {
                 dbsever.getPreparedStatement().setString(3,  pkSenderCode);
             */
               
-            //WriteLog((new CMarshalUtility()).GetMarshlStr(pIn), "C:\\e1.txt");
+            WriteLog((new CMarshalUtility()).GetMarshlStr(pIn), "C:\\e.txt");
             //WriteLog(Integer.toString(lPackType), "C:\\e1.txt");
 
             
@@ -978,7 +978,7 @@ public class CPackageInformation {
             try { dbsever.getPreparedStatement().close(); } catch (Exception e) {  }
             try { dbsever.getConnection().close(); } catch (Exception e) {  }
                         
-            WriteLog(res_xml, "C:\\e.txt");
+            //WriteLog(res_xml, "C:\\e.txt");
                         
             if(res_xml != null && res_xml.length() != 0)
             {
