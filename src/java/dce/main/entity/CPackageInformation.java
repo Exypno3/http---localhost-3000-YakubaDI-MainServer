@@ -978,7 +978,7 @@ public class CPackageInformation {
             try { dbsever.getPreparedStatement().close(); } catch (Exception e) {  }
             try { dbsever.getConnection().close(); } catch (Exception e) {  }
                         
-            //WriteLog(res_xml, "D:\\e3.txt");
+            WriteLog(res_xml, "D:\\e3.txt");
                         
             if(res_xml != null && res_xml.length() != 0)
             {
@@ -989,6 +989,7 @@ public class CPackageInformation {
 
                 if(pack_error == 1)
                 {
+                        
                     _return.getR11_rsinf().setR10_responcecode(1000);
                     _return.getR11_rsinf().setResponceMessage(CMessageUtils.GetMsgByID(1000));
                 }
