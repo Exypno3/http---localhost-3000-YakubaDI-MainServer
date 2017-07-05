@@ -901,6 +901,7 @@ public class CPackageInformation {
         String PackGuid = "", pkSenderCode = ""; 
         int zErr_Code = 0;
         CResponceOrdersPackage _return = new CResponceOrdersPackage();
+        
         try
         {
             CDBSever dbsever = new CDBSever(IConfigConstantsList.ConfMsgList[0], IConfigConstantsList.ConfMsgList[1]);
@@ -1005,7 +1006,7 @@ public class CPackageInformation {
         }
         catch(Exception e)
         {
-            WriteLog(e.toString(), "C:\\exception.txt");
+            WriteLog(e.toString(), "C:\\e.txt");
             
             SaveResponceInfoToDB(CPackageInformation.CreateErrorPackage(new CResponceOrdersPackage(), 1003, PackGuid), PackGuid);
             
@@ -1017,7 +1018,7 @@ public class CPackageInformation {
         return _return;
     }
     //--------------------------------------------------------------------------------------------------
-    
+
 }   
     
  /*   
