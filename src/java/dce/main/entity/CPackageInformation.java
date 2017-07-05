@@ -978,7 +978,7 @@ public class CPackageInformation {
             try { dbsever.getPreparedStatement().close(); } catch (Exception e) {  }
             try { dbsever.getConnection().close(); } catch (Exception e) {  }
                         
-            WriteLog(res_xml, "D:\\e3.txt");
+            WriteLog(res_xml, "C:\\e.txt");
                         
             if(res_xml != null && res_xml.length() != 0)
             {
