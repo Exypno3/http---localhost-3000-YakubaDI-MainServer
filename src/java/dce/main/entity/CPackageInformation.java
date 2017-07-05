@@ -919,6 +919,7 @@ public class CPackageInformation {
             {
                 lPackType = 233;
                 PackGuid = ((CevContactsPackage)pIn).getP10_packinf().getP12_pakageguid();
+                pkSenderCode = ((COrderNullificationPackage)pIn).getP10_packinf().getP11_pakagesender();                
             }
             else if("dce.main.entity.CevPlanDatesPackage".equals(pIn.getClass().getName()))
             {
@@ -938,6 +939,7 @@ public class CPackageInformation {
             dbsever.getPreparedStatement().setString(1, (new CMarshalUtility()).GetMarshlStr(pIn));
             dbsever.getPreparedStatement().setInt(2,lPackType);
             
+            
            /*
             if(pkSenderCode == null || pkSenderCode.length() == 0)
                 dbsever.getPreparedStatement().setNull(3, Types.NULL); 
@@ -945,7 +947,8 @@ public class CPackageInformation {
                 dbsever.getPreparedStatement().setString(3,  pkSenderCode);
             */
               
-            WriteLog((new CMarshalUtility()).GetMarshlStr(pIn), "C:\\e.txt");
+            //WriteLog((new CMarshalUtility()).GetMarshlStr(pIn), "C:\\e.txt");
+            WriteLog(pkSenderCode, "C:\\e.txt");
             //WriteLog(Integer.toString(lPackType), "C:\\e1.txt");
 
             
