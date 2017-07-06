@@ -1300,7 +1300,7 @@ public class DCExchangeSrv {
     //------------------------------------------------------------------------------------------------------------------------------
     @WebMethod(operationName = "putEvPlanDates")
     @WebResult(name="responcepack")
-    public CResponceOrdersPackage putEvContacts(@WebParam(name = "orderpack") CevPlanDatesPackage pinppack,
+    public CResponceOrdersPackage putEvPlanDates(@WebParam(name = "orderpack") CevPlanDatesPackage pinppack,
             @WebParam(name = "username") String username, @WebParam(name = "password") String password, @WebParam(name = "sendercode") String sendercode){
       try{
             if(pinppack.getP10_packinf().getP12_pakageguid().length() < 10 || pinppack.getP10_packinf().getP12_pakageguid() == null)
