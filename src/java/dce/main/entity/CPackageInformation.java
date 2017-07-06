@@ -292,7 +292,7 @@ public class CPackageInformation {
         catch(Exception e)
         {
             //SaveResponceInfoToDB(CPackageInformation.CreateErrorPackage(new CResponceAttachPackage(), 1003, PackGuid), PackGuid);
-            if(lPackType == 100)WriteLog(e.getMessage(), "D:\\error.txt");
+            //if(lPackType == 100)WriteLog(e.getMessage(), "D:\\error.txt");
             return CPackageInformation.CreateErrorPackage(new CResponceAttachPackage(), 1003, PackGuid);
         }
 
@@ -873,7 +873,7 @@ public class CPackageInformation {
                 break;
             }
             
-            WriteLog(res_xml, "C:\\res_xml.xml");
+            //WriteLog(res_xml, "C:\\res_xml.xml");
             
             try { rs.close(); } catch (Exception e) {  }
             try { dbsever.getPreparedStatement().close(); } catch (Exception e) {  }
