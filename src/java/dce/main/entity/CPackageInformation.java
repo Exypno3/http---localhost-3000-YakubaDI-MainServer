@@ -873,6 +873,8 @@ public class CPackageInformation {
                 break;
             }
             
+            WriteLog(res_xml, "C:\\res_xml.xml");
+            
             try { rs.close(); } catch (Exception e) {  }
             try { dbsever.getPreparedStatement().close(); } catch (Exception e) {  }
             try { dbsever.getConnection().close(); } catch (Exception e) {  }
