@@ -1282,16 +1282,8 @@ public class DCExchangeSrv {
     public CevPlanListPackage getEvPlanList(@WebParam(name = "username") String username, @WebParam(name = "password") String password, @WebParam(name = "sendercode") String sendercode, 
                 @WebParam(name = "year") int year, @WebParam(name = "mnth") int mnth) {
       try{
-          //  return CPackageInformation.evGetPackage(new CevPlanListPackage(), username, password, sendercode, year, mnth);
+            return CPackageInformation.evGetPackage(new CevPlanListPackage(), username, password, sendercode, year, mnth);
 
-            CevPlanListPackage pack = CPackageInformation.evGetPackage(new CevPlanListPackage(), username, password, sendercode, year, mnth);
-            JAXBContext jaxbContext = JAXBContext.newInstance(dce.main.entity.CevPlanListPackage.class);
-            Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
-            jaxbMarshaller.setProperty( Marshaller.JAXB_FORMATTED_OUTPUT, true );
-            jaxbMarshaller.marshal( pack, new File( "C:\\pack.xml" ) );
-            //jaxbMarshaller.marshal( pack, System.out );    
-          
-            return pack;
             
         }catch(Exception e){
             return null;
