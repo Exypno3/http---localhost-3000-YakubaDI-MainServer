@@ -1025,9 +1025,9 @@ public class CPackageInformation {
     //--------------------------------------------------------------------------------------------------
 
    
-    
-    public static void main(String[] args) {
  /*   
+    public static void main(String[] args) {
+    
         
         String ggg = "<orderpack>\n" +
 "  <p10_packinf>\n" +
@@ -1084,19 +1084,19 @@ public class CPackageInformation {
             String gg = "";
         }
     }
-*/
+
  try {
     CevPlanListPackage pack = CPackageInformation.evGetPackage(new CevPlanListPackage(), "9007", "9007fond", "9007", 2017, 1);
     JAXBContext jaxbContext = JAXBContext.newInstance(dce.main.entity.CevPlanListPackage.class);
     Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
     jaxbMarshaller.setProperty( Marshaller.JAXB_FORMATTED_OUTPUT, true );
     jaxbMarshaller.marshal( pack, new File( "C:\\pack.xml" ) );
-    jaxbMarshaller.marshal( pack, System.out );    
+    //jaxbMarshaller.marshal( pack, System.out );    
  } catch(Exception e)    
  {
      System.err.println(e.getMessage());
  }
      
-}
+}*/
 //--------------------------------------------------------------------------------------------------
 }
