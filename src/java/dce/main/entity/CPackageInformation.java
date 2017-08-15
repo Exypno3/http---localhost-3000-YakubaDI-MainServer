@@ -896,7 +896,7 @@ public class CPackageInformation {
             return res;
             
         }catch(Exception e){
-            //WriteLog(e.toString(), "C:\\xcpt.txt");
+            WriteLog(e.toString(), "C:\\xcpt.txt");
             
             return null;
         }
@@ -1027,7 +1027,7 @@ public class CPackageInformation {
     //--------------------------------------------------------------------------------------------------
 
    
- /*   
+ 
     public static void main(String[] args) {
     
         
@@ -1070,13 +1070,13 @@ public class CPackageInformation {
         
             JAXBContext jc = null;
         
-            jc = JAXBContext.newInstance(dce.main.entity.CevPlanQtysPackage.class);
+            jc = JAXBContext.newInstance(dce.main.entity.CevPlanListPackage.class);
             
             Unmarshaller u = jc.createUnmarshaller();
             StringBuffer xmlStr = new StringBuffer(ggg);
             StringReader sr = new StringReader(xmlStr.toString());
             StreamSource ss = new StreamSource(sr);
-            CevPlanQtysPackage res = (CevPlanQtysPackage)u.unmarshal(ss);  
+            CevPlanListPackage res = (CevPlanListPackage)u.unmarshal(ss);  
         
 
             System.err.println("asdfsdf");
@@ -1085,8 +1085,7 @@ public class CPackageInformation {
         {
             String gg = "";
         }
-    }
-
+/*
  try {
     CevPlanListPackage pack = CPackageInformation.evGetPackage(new CevPlanListPackage(), "9007", "9007fond", "9007", 2017, 1);
     JAXBContext jaxbContext = JAXBContext.newInstance(dce.main.entity.CevPlanListPackage.class);
@@ -1098,7 +1097,7 @@ public class CPackageInformation {
  {
      System.err.println(e.getMessage());
  }
-     
-}*/
+ */    
+}
 //--------------------------------------------------------------------------------------------------
 }
