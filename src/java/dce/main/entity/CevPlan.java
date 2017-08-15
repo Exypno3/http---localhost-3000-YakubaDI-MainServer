@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.XmlType;
  *
  * @author YakubaDI
  */
-@XmlType(propOrder = {"rid","code_mo","phone","comment"})
+@XmlType(propOrder = {"rid","kind","year","mnth","code_mo","dfSection","Person"})
 public class CevPlan {
     private int rid;
     private int kind;
