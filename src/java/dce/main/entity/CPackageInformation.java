@@ -883,7 +883,7 @@ public class CPackageInformation {
                 break;
             }
             
-            WriteLog(res_xml, "C:\\res_xml.xml");
+            //WriteLog(res_xml, "C:\\res_xml.xml");
             
             try { rs.close(); } catch (Exception e) {  }
             try { dbsever.getPreparedStatement().close(); } catch (Exception e) {  }
@@ -896,7 +896,7 @@ public class CPackageInformation {
             return res;
             
         }catch(Exception e){
-            WriteLog(e.toString(), "C:\\xcpt.txt");
+            //WriteLog(e.toString(), "C:\\xcpt.txt");
             
             return null;
         }
