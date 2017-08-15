@@ -9,14 +9,14 @@ package dce.main.entity;
  * @author YakubaDI
  */
 public class CevPlanList {
-    private CevPlan evPlanList[];
+    private CevPlan evPlan[];
 
-    public CevPlan[] getEvPlanList() {
-        return this.evPlanList;
+    public CevPlan[] getEvPlan() {
+        return this.evPlan;
     }
 
-    public void setEvPlanList(CevPlan[] evPlanList) {
-        this.evPlanList = evPlanList;
+    public void setEvPlanList(CevPlan[] evPlan) {
+        this.evPlan = evPlan;
     }
     
     
