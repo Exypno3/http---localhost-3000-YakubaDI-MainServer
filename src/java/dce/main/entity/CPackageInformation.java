@@ -896,6 +896,8 @@ public class CPackageInformation {
             return res;
             
         }catch(Exception e){
+            WriteLog(e.toString(), "C:\\xcpt.txt");
+            
             return null;
         }
     }
