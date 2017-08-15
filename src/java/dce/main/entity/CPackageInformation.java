@@ -822,7 +822,7 @@ public class CPackageInformation {
         
     }
     //--------------------------------------------------------------------------------------------------
-    public static <T> T evGetPackage(T param, String username, String password, String sendercode, int yearCode, int mnthCode)
+    public static <T> T evGetPackage(T param, String username, String password, String sendercode, int yearCode, int mnthCode, int page)
     {
         try{
             int _res = CDBSever.CheckUserForAccess(username, password, sendercode);
@@ -859,7 +859,7 @@ public class CPackageInformation {
             
             ///////////////////////////////////////////////////////////////////////////////////
             CDBSever dbsever = new CDBSever(IConfigConstantsList.ConfMsgList[0], IConfigConstantsList.ConfMsgList[1]);
-            dbsever.setQuerySTR("set dateformat dmy exec evGetPackage @PackType=?, @SenderCode=?, @YearCode=?, @MnthCode=?");
+            dbsever.setQuerySTR("set dateformat dmy exec evGetPackage @PackType=?, @SenderCode=?, @YearCode=?, @MnthCode=?, @Page=?");
             dbsever.getPreparedStatement().setInt(1,PackType);
             dbsever.getPreparedStatement().setString(2, sendercode);
             
@@ -873,6 +873,10 @@ public class CPackageInformation {
             else 
                 dbsever.getPreparedStatement().setInt(4,  mnthCode);
             
+            if(page == 0)
+                dbsever.getPreparedStatement().setNull(5, Types.NULL); 
+            else 
+                dbsever.getPreparedStatement().setInt(5,  page);
             
             String res_xml = "";
             ResultSet rs = dbsever.getPreparedStatement().executeQuery();
@@ -883,7 +887,7 @@ public class CPackageInformation {
                 break;
             }
             
-            WriteLog("<?xml version=\"1.0\" encoding=\"Windows-1251\"?>\r\n"+res_xml, "C:\\res_xml.xml");
+            //WriteLog("<?xml version=\"1.0\" encoding=\"Windows-1251\"?>\r\n"+res_xml, "C:\\res_xml.xml");
             
             try { rs.close(); } catch (Exception e) {  }
             try { dbsever.getPreparedStatement().close(); } catch (Exception e) {  }
@@ -896,7 +900,7 @@ public class CPackageInformation {
             return res;
             
         }catch(Exception e){
-            WriteLog(e.toString(), "C:\\xcpt.txt");
+            //WriteLog(e.toString(), "C:\\xcpt.txt");
             
             return null;
         }

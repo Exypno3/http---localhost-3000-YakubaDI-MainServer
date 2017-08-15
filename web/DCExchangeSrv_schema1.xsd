@@ -1436,6 +1436,7 @@
       <xs:element name="sendercode" type="xs:string" minOccurs="0"/>
       <xs:element name="year" type="xs:int" minOccurs="0"/>
       <xs:element name="mnth" type="xs:int" minOccurs="0"/>
+      <xs:element name="page" type="xs:int" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="getEvPlanListResponse">
