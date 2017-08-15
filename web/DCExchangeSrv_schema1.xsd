@@ -1405,6 +1405,19 @@
 
   
   <!-- getPlanList -->
+  <xs:element name="getEvPlanList" type="tns:getEvPlanList"/>
+  <xs:element name="getEvPlanListResponse" type="tns:getEvPlanListResponse"/>
+  <xs:complexType name="CevPlanListPackage">
+    <xs:sequence>
+      <xs:element name="p10_packinf" type="tns:cPackageInformation" minOccurs="0"/>
+      <xs:element name="evPlanList" type="tns:CevPlanList" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CevPlanList">
+    <xs:sequence>
+      <xs:element name="evPlan" type="tns:CevPlan" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>  
   <xs:complexType name="CevPlan">
     <xs:sequence>
       <xs:element name="rid" type="xs:int" minOccurs="0"/>
@@ -1414,6 +1427,19 @@
       <xs:element name="code_mo" type="xs:string" minOccurs="0"/>
       <xs:element name="dfSection" type="xs:string" minOccurs="0"/>
       <xs:element name="p12_pr" type="tns:cPerson" minOccurs="0"/>
+    </xs:sequence>
+  <xs:complexType name="getEvPlanList">
+    <xs:sequence>
+      <xs:element name="username" type="xs:string" minOccurs="0"/>
+      <xs:element name="password" type="xs:string" minOccurs="0"/>
+      <xs:element name="sendercode" type="xs:string" minOccurs="0"/>
+      <xs:element name="year" type="xs:int" minOccurs="0"/>
+      <xs:element name="mnth" type="xs:int" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getEvPlanListResponse">
+    <xs:sequence>
+      <xs:element name="orderpack" type="tns:CevPlanListPackage" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
   <!-- end of getPlanInfo-->  

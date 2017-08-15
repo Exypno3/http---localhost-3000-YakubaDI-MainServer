@@ -336,6 +336,17 @@
   </message>
   <!-- end of putEvPlanDates -->
   
+  
+   <!-- getEvPlanList -->
+  <message name="getEvPlanList">
+    <part name="parameters" element="tns:getEvPlanList"/>
+  </message>
+  <message name="getEvPlanListResponse">
+    <part name="parameters" element="tns:getEvPlanListResponse"/>
+  </message>
+  <!-- end of getEvPlanDates -->
+  
+  
 
   <portType name="DCExchangeSrv">
     <operation name="SendAttachDoctorSectionInformation">
@@ -565,6 +576,12 @@
     </operation>
     <!-- end of putEvPlanDates -->
     
+    <!-- getEvPlanList -->
+    <operation name="getEvPlanList">
+      <input wsam:Action="http://main.dce/DCExchangeSrv/getEvPlanListRequest" message="tns:getEvPlanList"/>
+      <output wsam:Action="http://main.dce/DCExchangeSrv/getEvPlanListResponse" message="tns:getEvPlanListResponse"/>
+    </operation>
+    <!-- end of getEvPlanDates -->
 
 
   </portType>
