@@ -17,7 +17,7 @@ public class CevPlanListPackage {
     private CPackageInformation p10_packinf;
     private CevPlanList evPlanList;
 
-    public CevPlanListPackage(CevPlanList evPlanList) {
+    public CevPlanListPackage() {
         this.evPlanList = new CevPlanList();
     }
 

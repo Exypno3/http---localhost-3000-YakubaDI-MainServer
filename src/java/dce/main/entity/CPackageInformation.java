@@ -822,7 +822,7 @@ public class CPackageInformation {
         
     }
     //--------------------------------------------------------------------------------------------------
-    public static <T> T evGetPackage(T param, String username, String password, String sendercode, int yearCode)
+    public static <T> T evGetPackage(T param, String username, String password, String sendercode, int yearCode, int mnthCode)
     {
         try{
             int _res = CDBSever.CheckUserForAccess(username, password, sendercode);
@@ -841,7 +841,11 @@ public class CPackageInformation {
                 PackType = 231;
                 jc = JAXBContext.newInstance(dce.main.entity.CevPlanQtysPackage.class);
             }
-            /// 232
+            else if(param.getClass().getName() == "dce.main.entity.CevPlanListPackage")
+            {
+                PackType = 232; 
+                jc = JAXBContext.newInstance(dce.main.entity.CevPlanListPackage.class);
+            }
             else if(param.getClass().getName() == "dce.main.entity.CevContactsPackage")
             {
                 PackType = 233; 
@@ -855,7 +859,7 @@ public class CPackageInformation {
             
             ///////////////////////////////////////////////////////////////////////////////////
             CDBSever dbsever = new CDBSever(IConfigConstantsList.ConfMsgList[0], IConfigConstantsList.ConfMsgList[1]);
-            dbsever.setQuerySTR("set dateformat dmy exec evGetPackage @PackType=?, @SenderCode=?, @YearCode=?");
+            dbsever.setQuerySTR("set dateformat dmy exec evGetPackage @PackType=?, @SenderCode=?, @YearCode=?, @MnthCode=?");
             dbsever.getPreparedStatement().setInt(1,PackType);
             dbsever.getPreparedStatement().setString(2, sendercode);
             
@@ -863,6 +867,12 @@ public class CPackageInformation {
                 dbsever.getPreparedStatement().setNull(3, Types.NULL); 
             else 
                 dbsever.getPreparedStatement().setInt(3,  yearCode);
+            
+            if(mnthCode == 0)
+                dbsever.getPreparedStatement().setNull(4, Types.NULL); 
+            else 
+                dbsever.getPreparedStatement().setInt(4,  mnthCode);
+            
             
             String res_xml = "";
             ResultSet rs = dbsever.getPreparedStatement().executeQuery();

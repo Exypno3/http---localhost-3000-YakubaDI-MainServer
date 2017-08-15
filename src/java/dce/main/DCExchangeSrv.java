@@ -1238,7 +1238,7 @@ public class DCExchangeSrv {
     public CevPlanQtysPackage getEvPlanQtys(@WebParam(name = "username") String username, @WebParam(name = "password") String password, 
             @WebParam(name = "sendercode") String sendercode, @WebParam(name = "year") int year) {
       try{
-            return CPackageInformation.evGetPackage(new CevPlanQtysPackage(), username, password, sendercode, year);
+            return CPackageInformation.evGetPackage(new CevPlanQtysPackage(), username, password, sendercode, year, 0);
             
         }catch(Exception e){
             return null;
@@ -1250,7 +1250,7 @@ public class DCExchangeSrv {
     @WebResult(name="orderpack")
     public CevContactsPackage getEvContacts(@WebParam(name = "username") String username, @WebParam(name = "password") String password, @WebParam(name = "sendercode") String sendercode) {
       try{
-            return CPackageInformation.evGetPackage(new CevContactsPackage(), username, password, sendercode, 0);
+            return CPackageInformation.evGetPackage(new CevContactsPackage(), username, password, sendercode, 0, 0);
             
         }catch(Exception e){
             return null;
@@ -1262,12 +1262,27 @@ public class DCExchangeSrv {
     @WebResult(name="orderpack")
     public CevPlanDatesPackage getEvPlanDates(@WebParam(name = "username") String username, @WebParam(name = "password") String password, @WebParam(name = "sendercode") String sendercode) {
       try{
-            return CPackageInformation.evGetPackage(new CevPlanDatesPackage(), username, password, sendercode, 0);
+            return CPackageInformation.evGetPackage(new CevPlanDatesPackage(), username, password, sendercode, 0, 0);
             
         }catch(Exception e){
             return null;
         }    
     }
+    
+    //------------------------------------------------------------------------------------------------------------------------------
+    @WebMethod(operationName = "getEvPlanList")
+    @WebResult(name="orderpack")
+    public CevPlanListPackage getEvPlanList(@WebParam(name = "username") String username, @WebParam(name = "password") String password, @WebParam(name = "sendercode") String sendercode, 
+                @WebParam(name = "year") int year, @WebParam(name = "mnth") int mnth) {
+      try{
+            return CPackageInformation.evGetPackage(new CevPlanListPackage(), username, password, sendercode, year, mnth);
+            
+        }catch(Exception e){
+            return null;
+        }    
+    }
+
+    
 
     //------------------------------------------------------------------------------------------------------------------------------
     @WebMethod(operationName = "putEvContacts")
