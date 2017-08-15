@@ -12,7 +12,7 @@ public class CevPlanList {
     private CevPlan evPlanList[];
 
     public CevPlan[] getEvPlanList() {
-        return evPlanList;
+        return this.evPlanList;
     }
 
     public void setEvPlanList(CevPlan[] evPlanList) {
