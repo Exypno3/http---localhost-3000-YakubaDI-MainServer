@@ -1076,6 +1076,19 @@
     </operation>
     <!-- end of putEvPlanDates -->
     
+    <!-- getEvPlanList -->
+    <operation name="getEvPlanList">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <!-- end of getEvPlanList -->
+    
+    
 
   </binding>
   <service name="DCExchangeSrv">
