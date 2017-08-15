@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.XmlType;
  *
  * @author YakubaDI
  */
-@XmlType(propOrder = {"rid","kind","year","mnth","code_mo","dfSection"})
+@XmlType(propOrder = {"rid","kind","year","mnth","code_mo","dfSection","person"})
 public class CevPlan {
     private int rid;
     private int kind;
@@ -17,7 +17,7 @@ public class CevPlan {
     private int mnth;
     private String code_mo;
     private String dfSection;
-    private CPerson Person = new CPerson();
+    private CPerson person = new CPerson();
 
     public int getRid() {
         return rid;
@@ -68,11 +68,11 @@ public class CevPlan {
     }
 
     public CPerson getPerson() {
-        return Person;
+        return person;
     }
 
-    public void setPerson(CPerson Person) {
-        this.Person = Person;
+    public void setPerson(CPerson person) {
+        this.person = person;
     }
     
 
