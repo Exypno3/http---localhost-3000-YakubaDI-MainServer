@@ -17,7 +17,7 @@ public class CevPlan {
     private int mnth;
     private String code_mo;
     private String dfSection;
-    private CPerson p12_pr = new CPerson();
+    private CPerson Person = new CPerson();
 
     public int getRid() {
         return rid;
@@ -67,12 +67,12 @@ public class CevPlan {
         this.dfSection = dfSection;
     }
 
-    public CPerson getP12_pr() {
-        return p12_pr;
+    public CPerson getPerson() {
+        return Person;
     }
 
-    public void setP12_pr(CPerson p12_pr) {
-        this.p12_pr = p12_pr;
+    public void setPerson(CPerson Person) {
+        this.Person = Person;
     }
     
 

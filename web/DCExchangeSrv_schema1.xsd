@@ -1426,7 +1426,7 @@
       <xs:element name="mnth" type="xs:int" minOccurs="0"/>
       <xs:element name="code_mo" type="xs:string" minOccurs="0"/>
       <xs:element name="dfSection" type="xs:string" minOccurs="0"/>
-      <xs:element name="p12_pr" type="tns:cPerson" minOccurs="0"/>
+      <xs:element name="Person" type="tns:cPerson" minOccurs="0"/>
     </xs:sequence>
   <xs:complexType name="getEvPlanList">
     <xs:sequence>
