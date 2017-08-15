@@ -22,7 +22,7 @@ public class CevPlanListPackage {
     }
 
     public CPackageInformation getP10_packinf() {
-        return p10_packinf;
+        return this.p10_packinf;
     }
 
     public void setP10_packinf(CPackageInformation p10_packinf) {
@@ -30,7 +30,7 @@ public class CevPlanListPackage {
     }
 
     public CevPlanList getEvPlanList() {
-        return evPlanList;
+        return this.evPlanList;
     }
 
     public void setEvPlanList(CevPlanList evPlanList) {
