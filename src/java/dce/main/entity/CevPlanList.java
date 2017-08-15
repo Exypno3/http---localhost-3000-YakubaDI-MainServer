@@ -4,12 +4,10 @@
  * and open the template in the editor.
  */
 package dce.main.entity;
-import javax.xml.bind.annotation.XmlRootElement;
 /**
  *
  * @author YakubaDI
  */
-@XmlRootElement(name="orderpack")
 public class CevPlanList {
     private CevPlan evPlanList[];
 
