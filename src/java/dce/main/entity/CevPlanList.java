@@ -15,7 +15,7 @@ public class CevPlanList {
         return this.evPlan;
     }
 
-    public void setEvPlanList(CevPlan[] evPlan) {
+    public void setEvPlan(CevPlan[] evPlan) {
         this.evPlan = evPlan;
     }
     
