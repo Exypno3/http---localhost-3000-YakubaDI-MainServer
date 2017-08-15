@@ -1027,7 +1027,7 @@ public class CPackageInformation {
     //--------------------------------------------------------------------------------------------------
 
    
- 
+/* 
     public static void main(String[] args) {
     
         
@@ -1085,7 +1085,7 @@ public class CPackageInformation {
         {
             String gg = "";
         }
-/*
+
  try {
     CevPlanListPackage pack = CPackageInformation.evGetPackage(new CevPlanListPackage(), "9007", "9007fond", "9007", 2017, 1);
     JAXBContext jaxbContext = JAXBContext.newInstance(dce.main.entity.CevPlanListPackage.class);
@@ -1097,7 +1097,7 @@ public class CPackageInformation {
  {
      System.err.println(e.getMessage());
  }
- */    
-}
+
+} */    
 //--------------------------------------------------------------------------------------------------
 }
