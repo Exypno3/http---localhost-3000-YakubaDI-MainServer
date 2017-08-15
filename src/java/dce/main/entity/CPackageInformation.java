@@ -887,7 +887,7 @@ public class CPackageInformation {
                 break;
             }
             
-            //WriteLog("<?xml version=\"1.0\" encoding=\"Windows-1251\"?>\r\n"+res_xml, "C:\\res_xml.xml");
+            WriteLog("<?xml version=\"1.0\" encoding=\"Windows-1251\"?>\r\n"+res_xml, "C:\\res_xml.xml");
             
             try { rs.close(); } catch (Exception e) {  }
             try { dbsever.getPreparedStatement().close(); } catch (Exception e) {  }
@@ -900,7 +900,7 @@ public class CPackageInformation {
             return res;
             
         }catch(Exception e){
-            //WriteLog(e.toString(), "C:\\xcpt.txt");
+            WriteLog(e.toString(), "C:\\xcpt.txt");
             
             return null;
         }
