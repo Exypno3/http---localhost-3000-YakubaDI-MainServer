@@ -1428,6 +1428,7 @@
       <xs:element name="dfSection" type="xs:string" minOccurs="0"/>
       <xs:element name="person" type="tns:cPerson" minOccurs="0"/>
     </xs:sequence>
+  </xs:complexType>  
   <xs:complexType name="getEvPlanList">
     <xs:sequence>
       <xs:element name="username" type="xs:string" minOccurs="0"/>
