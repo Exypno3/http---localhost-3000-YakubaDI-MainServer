@@ -822,7 +822,9 @@ public class CPackageInformation {
         
     }
     //--------------------------------------------------------------------------------------------------
-    public static <T> T evGetPackage(T param, String username, String password, String sendercode, int yearCode, int mnthCode, int page)
+    public static <T> T evGetPackage(T param, String username, String password, String sendercode, 
+        int yearCode, int mnthCode, int page, String smoCode, Date infoDate, 
+        String codeMO, Date execDate)
     {
         try{
             int _res = CDBSever.CheckUserForAccess(username, password, sendercode);
@@ -856,10 +858,25 @@ public class CPackageInformation {
                 PackType = 234; 
                 jc = JAXBContext.newInstance(dce.main.entity.CevPlanDatesPackage.class);
             }
+            else if(param.getClass().getName() == "dce.main.entity.CevFactInfosPackage")
+            {
+                PackType = 236; 
+                jc = JAXBContext.newInstance(dce.main.entity.CevFactInfosPackage.class);
+            }
+            else if(param.getClass().getName() == "dce.main.entity.CevFactExecsPackage")
+            {
+                PackType = 237; 
+                jc = JAXBContext.newInstance(dce.main.entity.CevFactExecsPackage.class);
+            }
+            else if(param.getClass().getName() == "dce.main.entity.CevFactInvcsPackage")
+            {
+                PackType = 238; 
+                jc = JAXBContext.newInstance(dce.main.entity.CevFactInvcsPackage.class);
+            }
             
             ///////////////////////////////////////////////////////////////////////////////////
             CDBSever dbsever = new CDBSever(IConfigConstantsList.ConfMsgList[0], IConfigConstantsList.ConfMsgList[1]);
-            dbsever.setQuerySTR("set dateformat dmy exec evGetPackage @PackType=?, @SenderCode=?, @YearCode=?, @MnthCode=?, @Page=?");
+            dbsever.setQuerySTR("set dateformat dmy exec evGetPackage @PackType=?, @SenderCode=?, @YearCode=?, @MnthCode=?, @Page=?, @SmoCode=?, @InfoDate=?, @CodeMO=?, @ExecDate-?");
             dbsever.getPreparedStatement().setInt(1,PackType);
             dbsever.getPreparedStatement().setString(2, sendercode);
             
@@ -878,6 +895,34 @@ public class CPackageInformation {
             else 
                 dbsever.getPreparedStatement().setInt(5,  page);
             
+            if(smoCode == null)
+                dbsever.getPreparedStatement().setNull(6, Types.NULL); 
+            else 
+                dbsever.getPreparedStatement().setString(6,  smoCode);
+
+            if(infoDate == null)
+                dbsever.getPreparedStatement().setNull(7, Types.NULL); 
+            else {
+                SimpleDateFormat dateFormat =  new SimpleDateFormat("dd.MM.yyyy");
+                dbsever.getPreparedStatement().setString(7, dateFormat.format(infoDate));
+            }
+            
+            if(codeMO == null)
+                dbsever.getPreparedStatement().setNull(8, Types.NULL); 
+            else 
+                dbsever.getPreparedStatement().setString(8,  codeMO);
+
+            if(execDate == null)
+                dbsever.getPreparedStatement().setNull(9, Types.NULL); 
+            else {
+                SimpleDateFormat dateFormat =  new SimpleDateFormat("dd.MM.yyyy");
+                dbsever.getPreparedStatement().setString(9, dateFormat.format(execDate));
+            }   
+                        
+            
+            
+
+
             String res_xml = "";
             ResultSet rs = dbsever.getPreparedStatement().executeQuery();
            

@@ -125,7 +125,19 @@ public class CMarshalUtility {
             {
                 context = JAXBContext.newInstance(dce.main.entity.CevPlanListPackage.class);
             }
-            
+            else if("dce.main.entity.CevFactInfosPackage".equals(param.getClass().getName()))
+            {
+                context = JAXBContext.newInstance(dce.main.entity.CevFactInfosPackage.class);
+            }
+            else if("dce.main.entity.CevFactExecsPackage".equals(param.getClass().getName()))
+            {
+                context = JAXBContext.newInstance(dce.main.entity.CevFactExecsPackage.class);
+            }
+            else if("dce.main.entity.CevFactInvcsPackage".equals(param.getClass().getName()))
+            {
+                context = JAXBContext.newInstance(dce.main.entity.CevFactInvcsPackage.class);
+            }
+
             
             Marshaller m = context.createMarshaller();
             m.setProperty(Marshaller.JAXB_ENCODING, "WINDOWS-1251");
