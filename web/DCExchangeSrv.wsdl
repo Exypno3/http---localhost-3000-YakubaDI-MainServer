@@ -346,6 +346,14 @@
   </message>
   <!-- end of getEvPlanDates -->
   
+  <!-- putEvPlanList -->
+  <message name="putEvPlanList">
+    <part name="parameters" element="tns:putEvPlanList"/>
+  </message>
+  <message name="putEvPlanListResponse">
+    <part name="parameters" element="tns:putEvPlanListResponse"/>
+  </message>
+  <!-- end of putEvPlanList -->
   
 
   <portType name="DCExchangeSrv">
@@ -583,6 +591,12 @@
     </operation>
     <!-- end of getEvPlanDates -->
 
+    <!-- putEvPlanList -->
+    <operation name="putEvPlanList">
+      <input wsam:Action="http://main.dce/DCExchangeSrv/putEvPlanListRequest" message="tns:putEvPlanList"/>
+      <output wsam:Action="http://main.dce/DCExchangeSrv/putEvPlanListResponse" message="tns:putEvPlanListResponse"/>
+    </operation>
+    <!-- end of putEvPlanList -->
 
   </portType>
   
@@ -1089,6 +1103,17 @@
     <!-- end of getEvPlanList -->
     
     
+    <!-- putEvPlanList -->
+    <operation name="putEvPlanList">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <!-- end of putEvPlanList -->
 
   </binding>
   <service name="DCExchangeSrv">
