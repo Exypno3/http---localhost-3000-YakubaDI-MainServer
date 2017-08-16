@@ -1447,6 +1447,23 @@
   <!-- end of getPlanInfo-->  
       
 
+  <!-- putEvPlanList -->
+  <xs:element name="putEvPlanList" type="tns:putEvPlanList"/>
+  <xs:element name="putEvPlanListResponse" type="tns:putEvPlanListResponse"/>
+  <xs:complexType name="putEvPlanList">
+    <xs:sequence>
+      <xs:element name="orderpack" type="tns:CevPlanListPackage" minOccurs="0"/>
+      <xs:element name="username" type="xs:string" minOccurs="0"/>
+      <xs:element name="password" type="xs:string" minOccurs="0"/>
+      <xs:element name="sendercode" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="putEvPlanListResponse">
+    <xs:sequence>
+      <xs:element name="responcepack" type="tns:cResponceOrdersPackage" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- end of putEvPlanList -->
   
 </xs:schema>
 
