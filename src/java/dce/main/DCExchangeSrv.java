@@ -1290,8 +1290,48 @@ public class DCExchangeSrv {
         }    
     }
 
-    
+    //------------------------------------------------------------------------------------------------------------------------------
+    @WebMethod(operationName = "getEvFactInfos")
+    @WebResult(name="orderpack")
+    public CevFactInfosPackage getEvFactInfos(@WebParam(name = "username") String username, @WebParam(name = "password") String password, @WebParam(name = "sendercode") String sendercode, 
+                @WebParam(name = "year") int year, @WebParam(name = "mnth") int mnth, @WebParam(name = "smo_code") String smo_code, @WebParam(name = "infodate") Date infodate) {
+      try{
+            return CPackageInformation.evGetPackage(new CevFactInfosPackage(), username, password, sendercode, year, mnth, 0, smo_code, infodate, null, null);
 
+            
+        }catch(Exception e){
+            return null;
+        }    
+    }
+    
+    //------------------------------------------------------------------------------------------------------------------------------
+    @WebMethod(operationName = "getEvFactExecs")
+    @WebResult(name="orderpack")
+    public CevFactExecsPackage getEvFactExecs(@WebParam(name = "username") String username, @WebParam(name = "password") String password, @WebParam(name = "sendercode") String sendercode, 
+                @WebParam(name = "year") int year, @WebParam(name = "mnth") int mnth, @WebParam(name = "code_mo") String code_mo, @WebParam(name = "execdate") Date execdate) {
+      try{
+            return CPackageInformation.evGetPackage(new CevFactExecsPackage(), username, password, sendercode, year, mnth, 0, null, null, code_mo, execdate);
+
+            
+        }catch(Exception e){
+            return null;
+        }    
+    }
+
+    //------------------------------------------------------------------------------------------------------------------------------
+    @WebMethod(operationName = "getEvFactInvcs")
+    @WebResult(name="orderpack")
+    public CevFactInvcsPackage getEvFactInvcs(@WebParam(name = "username") String username, @WebParam(name = "password") String password, @WebParam(name = "sendercode") String sendercode, 
+                @WebParam(name = "year") int year, @WebParam(name = "mnth") int mnth, @WebParam(name = "page") int page) {
+      try{
+            return CPackageInformation.evGetPackage(new CevFactInvcsPackage(), username, password, sendercode, year, mnth, page, null, null, null, null);
+
+            
+        }catch(Exception e){
+            return null;
+        }    
+    }    
+    
     //------------------------------------------------------------------------------------------------------------------------------
     @WebMethod(operationName = "putEvContacts")
     @WebResult(name="responcepack")
