@@ -928,8 +928,12 @@ public class CPackageInformation {
                 PackGuid = ((CevPlanQtysPackage)pIn).getP10_packinf().getP12_pakageguid();
             }
             */
-            // 232  else 
-            if("dce.main.entity.CevContactsPackage".equals(pIn.getClass().getName()))
+            if("dce.main.entity.CevPlanListPackage".equals(pIn.getClass().getName()))
+            {
+                lPackType = 232;
+                PackGuid = ((CevPlanListPackage)pIn).getP10_packinf().getP12_pakageguid();
+            }
+            else if("dce.main.entity.CevContactsPackage".equals(pIn.getClass().getName()))
             {
                 lPackType = 233;
                 PackGuid = ((CevContactsPackage)pIn).getP10_packinf().getP12_pakageguid();
@@ -1017,7 +1021,7 @@ public class CPackageInformation {
         }
         catch(Exception e)
         {
-            WriteLog(e.toString(), "C:\\xcpt.txt");
+            //WriteLog(e.toString(), "C:\\xcpt.txt");
             
             SaveResponceInfoToDB(CPackageInformation.CreateErrorPackage(new CResponceOrdersPackage(), 1003, PackGuid), PackGuid);
             
