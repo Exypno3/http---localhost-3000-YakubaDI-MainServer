@@ -989,6 +989,17 @@ public class CPackageInformation {
                 lPackType = 234;
                 PackGuid = ((CevPlanDatesPackage)pIn).getP10_packinf().getP12_pakageguid();
             }
+            else if("dce.main.entity.CevFactInfosPackage".equals(pIn.getClass().getName()))
+            {
+                lPackType = 236;
+                PackGuid = ((CevFactInfosPackage)pIn).getP10_packinf().getP12_pakageguid();
+            }
+            else if("dce.main.entity.CevFactExecsPackage".equals(pIn.getClass().getName()))
+            {
+                lPackType = 237;
+                PackGuid = ((CevFactExecsPackage)pIn).getP10_packinf().getP12_pakageguid();
+            }
+            
                  
             _return.getR11_rsinf().setPakageGUIDSrc(PackGuid);
         
