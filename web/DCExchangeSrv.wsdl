@@ -355,6 +355,53 @@
   </message>
   <!-- end of putEvPlanList -->
   
+   <!-- getEvFactInfos -->
+  <message name="getEvFactInfos">
+    <part name="parameters" element="tns:getEvFactInfos"/>
+  </message>
+  <message name="getEvFactInfosResponse">
+    <part name="parameters" element="tns:getEvFactInfosResponse"/>
+  </message>
+  <!-- end of getEvPlanDates -->
+  
+  <!-- putEvFactInfos -->
+  <message name="putEvFactInfos">
+    <part name="parameters" element="tns:putEvFactInfos"/>
+  </message>
+  <message name="putEvFactInfosResponse">
+    <part name="parameters" element="tns:putEvFactInfosResponse"/>
+  </message>
+  <!-- end of putEvFactInfos -->
+  
+   <!-- getEvFactExecs -->
+  <message name="getEvFactExecs">
+    <part name="parameters" element="tns:getEvFactExecs"/>
+  </message>
+  <message name="getEvFactExecsResponse">
+    <part name="parameters" element="tns:getEvFactExecsResponse"/>
+  </message>
+  <!-- end of getEvPlanDates -->
+  
+  <!-- putEvFactExecs -->
+  <message name="putEvFactExecs">
+    <part name="parameters" element="tns:putEvFactExecs"/>
+  </message>
+  <message name="putEvFactExecsResponse">
+    <part name="parameters" element="tns:putEvFactExecsResponse"/>
+  </message>
+  <!-- end of putEvFactExecs -->
+  
+  
+   <!-- getEvFactInvcs -->
+  <message name="getEvFactInvcs">
+    <part name="parameters" element="tns:getEvFactInvcs"/>
+  </message>
+  <message name="getEvFactInvcsResponse">
+    <part name="parameters" element="tns:getEvFactInvcsResponse"/>
+  </message>
+  <!-- end of getEvPlanDates -->
+  
+  
 
   <portType name="DCExchangeSrv">
     <operation name="SendAttachDoctorSectionInformation">
@@ -597,6 +644,43 @@
       <output wsam:Action="http://main.dce/DCExchangeSrv/putEvPlanListResponse" message="tns:putEvPlanListResponse"/>
     </operation>
     <!-- end of putEvPlanList -->
+
+
+    <!-- getEvFactInfos -->
+    <operation name="getEvFactInfos">
+      <input wsam:Action="http://main.dce/DCExchangeSrv/getEvFactInfosRequest" message="tns:getEvFactInfos"/>
+      <output wsam:Action="http://main.dce/DCExchangeSrv/getEvFactInfosResponse" message="tns:getEvFactInfosResponse"/>
+    </operation>
+    <!-- end of getEvPlanDates -->
+
+    <!-- putEvFactInfos -->
+    <operation name="putEvFactInfos">
+      <input wsam:Action="http://main.dce/DCExchangeSrv/putEvFactInfosRequest" message="tns:putEvFactInfos"/>
+      <output wsam:Action="http://main.dce/DCExchangeSrv/putEvFactInfosResponse" message="tns:putEvFactInfosResponse"/>
+    </operation>
+    <!-- end of putEvFactInfos -->
+
+    <!-- getEvFactExecs -->
+    <operation name="getEvFactExecs">
+      <input wsam:Action="http://main.dce/DCExchangeSrv/getEvFactExecsRequest" message="tns:getEvFactExecs"/>
+      <output wsam:Action="http://main.dce/DCExchangeSrv/getEvFactExecsResponse" message="tns:getEvFactExecsResponse"/>
+    </operation>
+    <!-- end of getEvPlanDates -->
+
+    <!-- putEvFactExecs -->
+    <operation name="putEvFactExecs">
+      <input wsam:Action="http://main.dce/DCExchangeSrv/putEvFactExecsRequest" message="tns:putEvFactExecs"/>
+      <output wsam:Action="http://main.dce/DCExchangeSrv/putEvFactExecsResponse" message="tns:putEvFactExecsResponse"/>
+    </operation>
+    <!-- end of putEvFactExecs -->
+
+    <!-- getEvFactInvcs -->
+    <operation name="getEvFactInvcs">
+      <input wsam:Action="http://main.dce/DCExchangeSrv/getEvFactInvcsRequest" message="tns:getEvFactInvcs"/>
+      <output wsam:Action="http://main.dce/DCExchangeSrv/getEvFactInvcsResponse" message="tns:getEvFactInvcsResponse"/>
+    </operation>
+    <!-- end of getEvPlanDates -->
+
 
   </portType>
   
@@ -1102,7 +1186,6 @@
     </operation>
     <!-- end of getEvPlanList -->
     
-    
     <!-- putEvPlanList -->
     <operation name="putEvPlanList">
       <soap:operation soapAction=""/>
@@ -1114,6 +1197,68 @@
       </output>
     </operation>
     <!-- end of putEvPlanList -->
+
+    <!-- getEvFactInfos -->
+    <operation name="getEvFactInfos">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <!-- end of getEvFactInfos -->
+    
+    <!-- putEvFactInfos -->
+    <operation name="putEvFactInfos">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <!-- end of putEvFactInfos -->
+    
+    <!-- getEvFactExecs -->
+    <operation name="getEvFactExecs">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <!-- end of getEvFactExecs -->
+    
+    <!-- putEvFactExecs -->
+    <operation name="putEvFactExecs">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <!-- end of putEvFactExecs -->
+    
+    <!-- getEvFactInvcs -->
+    <operation name="getEvFactInvcs">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <!-- end of getEvFactInvcs -->
+    
+    
 
   </binding>
   <service name="DCExchangeSrv">
