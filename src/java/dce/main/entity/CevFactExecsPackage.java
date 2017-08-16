@@ -11,13 +11,13 @@ import javax.xml.bind.annotation.XmlType;
  * @author YakubaDI
  */
 @XmlRootElement(name="orderpack")
-@XmlType(propOrder = {"p10_packinf","evFactInfos"})
-public class CevFactInfosPackage {
+@XmlType(propOrder = {"p10_packinf","evFactExecs"})
+public class CevFactExecsPackage {
     private CPackageInformation p10_packinf;
-    private CevFactInfos evFactInfos;
+    private CevFactExecs evFactExecs;
 
-    public CevFactInfosPackage() {
-        this.evFactInfos = new CevFactInfos();
+    public CevFactExecsPackage() {
+        this.evFactExecs = new CevFactExecs();
     }
 
     public CPackageInformation getP10_packinf() {
@@ -28,13 +28,14 @@ public class CevFactInfosPackage {
         this.p10_packinf = p10_packinf;
     }
 
-    public CevFactInfos getEvFactInfos() {
-        return evFactInfos;
+    public CevFactExecs getEvFactExecs() {
+        return evFactExecs;
     }
 
-    public void setEvFactInfos(CevFactInfos evFactInfos) {
-        this.evFactInfos = evFactInfos;
+    public void setEvFactExecs(CevFactExecs evFactExecs) {
+        this.evFactExecs = evFactExecs;
     }
+    
     
     
 }
