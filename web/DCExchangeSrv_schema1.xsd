@@ -1444,9 +1444,7 @@
       <xs:element name="orderpack" type="tns:CevPlanListPackage" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
-  <!-- end of getPlanInfo-->  
-      
-
+  <!-- end of getPlanList-->  
   <!-- putEvPlanList -->
   <xs:element name="putEvPlanList" type="tns:putEvPlanList"/>
   <xs:element name="putEvPlanListResponse" type="tns:putEvPlanListResponse"/>
@@ -1464,7 +1462,171 @@
     </xs:sequence>
   </xs:complexType>
   <!-- end of putEvPlanList -->
+
   
+    
+  <!-- getFactInfos -->
+  <xs:element name="getEvFactInfos" type="tns:getEvFactInfos"/>
+  <xs:element name="getEvFactInfosResponse" type="tns:getEvFactInfosResponse"/>
+  <xs:complexType name="CevFactInfosPackage">
+    <xs:sequence>
+      <xs:element name="p10_packinf" type="tns:cPackageInformation" minOccurs="0"/>
+      <xs:element name="evFactInfos" type="tns:CevFactInfos" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CevFactInfos">
+    <xs:sequence>
+      <xs:element name="evFactInfo" type="tns:CevFactInfo" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>  
+  <xs:complexType name="CevFactInfo">
+    <xs:sequence>
+      <xs:element name="rid" type="xs:int" minOccurs="0"/>
+      <xs:element name="smo_code" type="xs:string" minOccurs="0"/>
+      <xs:element name="infodate" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="infometh" type="xs:int" minOccurs="0"/>
+      <xs:element name="infostep" type="xs:int" minOccurs="0"/>
+      <xs:element name="person" type="tns:cPerson" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>  
+  <xs:complexType name="getEvFactInfos">
+    <xs:sequence>
+      <xs:element name="username" type="xs:string" minOccurs="0"/>
+      <xs:element name="password" type="xs:string" minOccurs="0"/>
+      <xs:element name="sendercode" type="xs:string" minOccurs="0"/>
+      <xs:element name="smo_code" type="xs:string" minOccurs="0"/>
+      <xs:element name="infodate" type="xs:dateTime" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getEvFactInfosResponse">
+    <xs:sequence>
+      <xs:element name="orderpack" type="tns:CevFactInfosPackage" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- end of getFactInfo-->  
+  <!-- putEvFactInfos -->
+  <xs:element name="putEvFactInfos" type="tns:putEvFactInfos"/>
+  <xs:element name="putEvFactInfosResponse" type="tns:putEvFactInfosResponse"/>
+  <xs:complexType name="putEvFactInfos">
+    <xs:sequence>
+      <xs:element name="orderpack" type="tns:CevFactInfosPackage" minOccurs="0"/>
+      <xs:element name="username" type="xs:string" minOccurs="0"/>
+      <xs:element name="password" type="xs:string" minOccurs="0"/>
+      <xs:element name="sendercode" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="putEvFactInfosResponse">
+    <xs:sequence>
+      <xs:element name="responcepack" type="tns:cResponceOrdersPackage" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- end of putEvFactInfos -->
+        
+        
+  <!-- getFactExecs -->
+  <xs:element name="getEvFactExecs" type="tns:getEvFactExecs"/>
+  <xs:element name="getEvFactExecsResponse" type="tns:getEvFactExecsResponse"/>
+  <xs:complexType name="CevFactExecsPackage">
+    <xs:sequence>
+      <xs:element name="p10_packinf" type="tns:cPackageInformation" minOccurs="0"/>
+      <xs:element name="evFactExecs" type="tns:CevFactExecs" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CevFactExecs">
+    <xs:sequence>
+      <xs:element name="evFactExec" type="tns:CevFactExec" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>  
+  <xs:complexType name="CevFactExec">
+    <xs:sequence>
+      <xs:element name="rid" type="xs:int" minOccurs="0"/>
+      <xs:element name="code_mo" type="xs:string" minOccurs="0"/>
+      <xs:element name="execdate" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="execstep" type="xs:int" minOccurs="0"/>
+      <xs:element name="person" type="tns:cPerson" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>  
+  <xs:complexType name="getEvFactExecs">
+    <xs:sequence>
+      <xs:element name="username" type="xs:string" minOccurs="0"/>
+      <xs:element name="password" type="xs:string" minOccurs="0"/>
+      <xs:element name="sendercode" type="xs:string" minOccurs="0"/>
+      <xs:element name="code_mo" type="xs:string" minOccurs="0"/>
+      <xs:element name="execdate" type="xs:dateTime" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getEvFactExecsResponse">
+    <xs:sequence>
+      <xs:element name="orderpack" type="tns:CevFactExecsPackage" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- end of getFactExecs-->  
+  <!-- putEvFactExecs -->
+  <xs:element name="putEvFactExecs" type="tns:putEvFactExecs"/>
+  <xs:element name="putEvFactExecsResponse" type="tns:putEvFactExecsResponse"/>
+  <xs:complexType name="putEvFactExecs">
+    <xs:sequence>
+      <xs:element name="orderpack" type="tns:CevFactExecsPackage" minOccurs="0"/>
+      <xs:element name="username" type="xs:string" minOccurs="0"/>
+      <xs:element name="password" type="xs:string" minOccurs="0"/>
+      <xs:element name="sendercode" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="putEvFactExecsResponse">
+    <xs:sequence>
+      <xs:element name="responcepack" type="tns:cResponceOrdersPackage" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- end of putEvFactExecs -->
+
+
+  <!-- getFactInvcs -->
+  <xs:element name="getEvFactInvcs" type="tns:getEvFactInvcs"/>
+  <xs:element name="getEvFactInvcsResponse" type="tns:getEvFactInvcsResponse"/>
+  <xs:complexType name="CevFactInvcsPackage">
+    <xs:sequence>
+      <xs:element name="p10_packinf" type="tns:cPackageInformation" minOccurs="0"/>
+      <xs:element name="evFactInvcs" type="tns:CevFactInvcs" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CevFactInvcs">
+    <xs:sequence>
+      <xs:element name="evFactInvc" type="tns:CevFactInvc" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>  
+  <xs:complexType name="CevFactInvc">
+    <xs:sequence>
+      <xs:element name="rid" type="xs:int" minOccurs="0"/>
+      <xs:element name="year" type="xs:int" minOccurs="0"/>
+      <xs:element name="mnth" type="xs:int" minOccurs="0"/>
+      <xs:element name="code_mo" type="xs:string" minOccurs="0"/>
+      <xs:element name="invcdatn" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="invcdato" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="invcdate" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="invcstts" type="xs:int" minOccurs="0"/>
+      <xs:element name="ishob" type="xs:string" minOccurs="0"/>
+      <xs:element name="person" type="tns:cPerson" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>  
+  <xs:complexType name="getEvFactInvcs">
+    <xs:sequence>
+      <xs:element name="username" type="xs:string" minOccurs="0"/>
+      <xs:element name="password" type="xs:string" minOccurs="0"/>
+      <xs:element name="sendercode" type="xs:string" minOccurs="0"/>
+      <xs:element name="year" type="xs:int" minOccurs="0"/>
+      <xs:element name="mnth" type="xs:int" minOccurs="0"/>
+      <xs:element name="page" type="xs:int" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getEvFactInvcsResponse">
+    <xs:sequence>
+      <xs:element name="orderpack" type="tns:CevFactInvcsPackage" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- end of getFactInvcs-->  
+
+
+
 </xs:schema>
 
 
