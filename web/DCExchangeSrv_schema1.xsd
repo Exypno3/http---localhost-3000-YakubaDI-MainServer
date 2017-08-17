@@ -1483,6 +1483,7 @@
     <xs:sequence>
       <xs:element name="rid" type="xs:int" minOccurs="0"/>
       <xs:element name="smo_code" type="xs:string" minOccurs="0"/>
+      <xs:element name="code_mo" type="xs:string" minOccurs="0"/>
       <xs:element name="infodate" type="xs:dateTime" minOccurs="0"/>
       <xs:element name="infometh" type="xs:int" minOccurs="0"/>
       <xs:element name="infostep" type="xs:int" minOccurs="0"/>

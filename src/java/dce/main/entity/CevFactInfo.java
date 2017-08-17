@@ -11,14 +11,16 @@ import javax.xml.bind.annotation.XmlType;
  *
  * @author YakubaDI
  */
-@XmlType(propOrder = {"rid","smo_code","infodate","infometh","infostep","person"})
+@XmlType(propOrder = {"rid","smo_code","code_mo","infodate","infometh","infostep","person"})
 public class CevFactInfo {
     private int rid;
     private String smo_code;
+    private String code_mo;
     private Date infodate = null;
     private int infometh;
     private int infostep;
     private CPerson person = new CPerson();
+
 
     public int getRid() {
         return rid;
@@ -34,6 +36,14 @@ public class CevFactInfo {
 
     public void setSmo_code(String smo_code) {
         this.smo_code = smo_code;
+    }
+
+    public String getCode_mo() {
+        return code_mo;
+    }
+
+    public void setCode_mo(String code_mo) {
+        this.code_mo = code_mo;
     }
 
     public Date getInfodate() {
