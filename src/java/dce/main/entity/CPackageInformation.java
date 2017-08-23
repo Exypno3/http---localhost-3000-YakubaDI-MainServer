@@ -744,6 +744,13 @@ public class CPackageInformation {
         else if("dce.main.entity.CAttachDoctorSectionPackage".equals(pIn.getClass().getName()))((CAttachDoctorSectionPackage)pIn).setP10_packinf(_return);
         else if("dce.main.entity.CAttachPersonListPackage".equals(pIn.getClass().getName()))((CAttachPersonListPackage)pIn).setP10_packinf(_return);
         else if("dce.main.entity.CDeAttachQueryForMOPackage".equals(pIn.getClass().getName()))((CDeAttachQueryForMOPackage)pIn).setP10_packinf(_return);
+        
+        else if("dce.main.entity.CevPlanQtysPackage".equals(pIn.getClass().getName()))((CevPlanQtysPackage)pIn).setP10_packinf(_return);
+        else if("dce.main.entity.CevPlanListPackage".equals(pIn.getClass().getName()))((CevPlanListPackage)pIn).setP10_packinf(_return);
+        else if("dce.main.entity.CevContactsPackage".equals(pIn.getClass().getName()))((CevContactsPackage)pIn).setP10_packinf(_return);
+        else if("dce.main.entity.CevPlanDatesPackage".equals(pIn.getClass().getName()))((CevPlanDatesPackage)pIn).setP10_packinf(_return);
+        else if("dce.main.entity.CevFactInfosPackage".equals(pIn.getClass().getName()))((CevFactInfosPackage)pIn).setP10_packinf(_return);
+        else if("dce.main.entity.CevFactExecsPackage".equals(pIn.getClass().getName()))((CevFactExecsPackage)pIn).setP10_packinf(_return);
         else if("dce.main.entity.CevFactInvcsPackage".equals(pIn.getClass().getName()))((CevFactInvcsPackage)pIn).setP10_packinf(_return);
         
         
