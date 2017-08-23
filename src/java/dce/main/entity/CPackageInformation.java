@@ -876,7 +876,7 @@ public class CPackageInformation {
             
             ///////////////////////////////////////////////////////////////////////////////////
             CDBSever dbsever = new CDBSever(IConfigConstantsList.ConfMsgList[0], IConfigConstantsList.ConfMsgList[1]);
-            dbsever.setQuerySTR("set dateformat dmy exec evGetPackage @PackType=?, @SenderCode=?, @YearCode=?, @MnthCode=?, @Page=?, @SmoCode=?, @InfoDate=?, @CodeMO=?, @ExecDate-?");
+            dbsever.setQuerySTR("set dateformat dmy exec evGetPackage @PackType=?, @SenderCode=?, @YearCode=?, @MnthCode=?, @Page=?, @SmoCode=?, @InfoDate=?, @CodeMO=?, @ExecDate=?");
             dbsever.getPreparedStatement().setInt(1,PackType);
             dbsever.getPreparedStatement().setString(2, sendercode);
             
