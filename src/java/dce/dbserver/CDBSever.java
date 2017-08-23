@@ -155,7 +155,7 @@ public class CDBSever {
         catch(Exception ex){ 
             return -1;
         }
-        return 1;
+        return -1;
     }
     //------------------------------------------------------------------------------
     public static String GetDBValue(String rUserLogin, String rPassword, String rMessageSender, String param)
