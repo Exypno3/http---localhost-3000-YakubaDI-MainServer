@@ -823,6 +823,8 @@ public class CPackageInformation {
         int yearCode, int mnthCode, int page, String smoCode, Date infoDate, 
         String codeMO, Date execDate)
     {
+                WriteLog("1", "C:\\ev.log");
+
         try{
             int _res = CDBSever.CheckUserForAccess(username, password, sendercode);
             
@@ -867,7 +869,6 @@ public class CPackageInformation {
             }
             else if(param.getClass().getName() == "dce.main.entity.CevFactInvcsPackage")
             {
-                WriteLog("1", "C:\\ev.log");
                 PackType = 238; 
                 jc = JAXBContext.newInstance(dce.main.entity.CevFactInvcsPackage.class);
             }
