@@ -867,11 +867,11 @@ public class CPackageInformation {
             }
             else if(param.getClass().getName() == "dce.main.entity.CevFactInvcsPackage")
             {
+                WriteLog("1", "C:\\ev.log");
                 PackType = 238; 
                 jc = JAXBContext.newInstance(dce.main.entity.CevFactInvcsPackage.class);
             }
             
-            WriteLog("1", "C:\\ev.log");
             
             ///////////////////////////////////////////////////////////////////////////////////
             CDBSever dbsever = new CDBSever(IConfigConstantsList.ConfMsgList[0], IConfigConstantsList.ConfMsgList[1]);
