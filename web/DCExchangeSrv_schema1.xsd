@@ -1543,7 +1543,7 @@
     <xs:sequence>
       <xs:element name="rid" type="xs:int" minOccurs="0"/>
       <xs:element name="code_mo" type="xs:string" minOccurs="0"/>
-      <xs:element name="execdate" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="execdate" type="xs:date" minOccurs="0"/>
       <xs:element name="execstep" type="xs:int" minOccurs="0"/>
       <xs:element name="person" type="tns:cPerson" minOccurs="0"/>
     </xs:sequence>
@@ -1554,7 +1554,7 @@
       <xs:element name="password" type="xs:string" minOccurs="0"/>
       <xs:element name="sendercode" type="xs:string" minOccurs="0"/>
       <xs:element name="code_mo" type="xs:string" minOccurs="0"/>
-      <xs:element name="execdate" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="execdate" type="xs:date" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="getEvFactExecsResponse">
