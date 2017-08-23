@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package dce.main.entity;
-
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 /**
