@@ -1324,6 +1324,7 @@ public class DCExchangeSrv {
     public CevFactInvcsPackage getEvFactInvcs(@WebParam(name = "username") String username, @WebParam(name = "password") String password, @WebParam(name = "sendercode") String sendercode, 
                 @WebParam(name = "year") int year, @WebParam(name = "mnth") int mnth, @WebParam(name = "page") int page) {
       try{
+            CPackageInformation.WriteLog("0","C:\\ev0.log");
             return CPackageInformation.evGetPackage(new CevFactInvcsPackage(), username, password, sendercode, year, mnth, page, null, null, null, null);
 
             
