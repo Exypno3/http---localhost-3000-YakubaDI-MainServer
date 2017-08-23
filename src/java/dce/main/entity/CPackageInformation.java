@@ -874,6 +874,8 @@ public class CPackageInformation {
                 jc = JAXBContext.newInstance(dce.main.entity.CevFactInvcsPackage.class);
             }
             
+            WriteLog("1", "C:\\ev.log");
+            
             ///////////////////////////////////////////////////////////////////////////////////
             CDBSever dbsever = new CDBSever(IConfigConstantsList.ConfMsgList[0], IConfigConstantsList.ConfMsgList[1]);
             dbsever.setQuerySTR("set dateformat dmy exec evGetPackage @PackType=?, @SenderCode=?, @YearCode=?, @MnthCode=?, @Page=?, @SmoCode=?, @InfoDate=?, @CodeMO=?, @ExecDate=?");
