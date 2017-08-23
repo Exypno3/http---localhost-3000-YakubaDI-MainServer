@@ -470,11 +470,8 @@ public class CPackageInformation {
     public static void WriteLog(String LogMsg, String LogFile)
     {
         try {
-            FileWriter writeFile3 = null;
             File logFile3 = new File(LogFile);
-
-            writeFile3 = new FileWriter(logFile3);
-            
+            FileWriter writeFile3 = new FileWriter(logFile3);
             writeFile3.write(LogMsg);
             writeFile3.close();
         } 
