@@ -1602,9 +1602,9 @@
       <xs:element name="year" type="xs:int" minOccurs="0"/>
       <xs:element name="mnth" type="xs:int" minOccurs="0"/>
       <xs:element name="code_mo" type="xs:string" minOccurs="0"/>
-      <xs:element name="invcdatn" type="xs:dateTime" minOccurs="0"/>
-      <xs:element name="invcdato" type="xs:dateTime" minOccurs="0"/>
-      <xs:element name="invcdate" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="invcdatn" type="xs:date" minOccurs="0"/>
+      <xs:element name="invcdato" type="xs:date" minOccurs="0"/>
+      <xs:element name="invcdate" type="xs:date" minOccurs="0"/>
       <xs:element name="invcstts" type="xs:int" minOccurs="0"/>
       <xs:element name="ishob" type="xs:string" minOccurs="0"/>
       <xs:element name="person" type="tns:cPerson" minOccurs="0"/>
