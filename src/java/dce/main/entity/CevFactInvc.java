@@ -10,12 +10,13 @@ import javax.xml.bind.annotation.XmlType;
  *
  * @author YakubaDI
  */
-@XmlType(propOrder = {"rid","year","mnth","code_mo","invcdatn","invcdato","invcdate","invcstts","ishob","person"})
+@XmlType(propOrder = {"rid","year","mnth","code_mo","smo_code","invcdatn","invcdato","invcdate","invcstts","ishob","person"})
 public class CevFactInvc {
     private int rid;
     private int year;
     private int mnth;
     private String code_mo;
+    private String smo_code;
     private Date invcdatn = null;
     private Date invcdato = null;
     private Date invcdate = null;
@@ -55,6 +56,14 @@ public class CevFactInvc {
         this.code_mo = code_mo;
     }
 
+    public String getSmo_code() {
+        return smo_code;
+    }
+
+    public void setSmo_code(String smo_code) {
+        this.smo_code = smo_code;
+    }
+    
     public Date getInvcdatn() {
         return invcdatn;
     }
