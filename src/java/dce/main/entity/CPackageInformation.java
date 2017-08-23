@@ -744,6 +744,7 @@ public class CPackageInformation {
         else if("dce.main.entity.CAttachDoctorSectionPackage".equals(pIn.getClass().getName()))((CAttachDoctorSectionPackage)pIn).setP10_packinf(_return);
         else if("dce.main.entity.CAttachPersonListPackage".equals(pIn.getClass().getName()))((CAttachPersonListPackage)pIn).setP10_packinf(_return);
         else if("dce.main.entity.CDeAttachQueryForMOPackage".equals(pIn.getClass().getName()))((CDeAttachQueryForMOPackage)pIn).setP10_packinf(_return);
+        else if("dce.main.entity.CevFactInvcsPackage".equals(pIn.getClass().getName()))((CevFactInvcsPackage)pIn).setP10_packinf(_return);
         
         
         return pIn;
