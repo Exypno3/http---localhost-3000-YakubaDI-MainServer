@@ -1404,7 +1404,7 @@
   <!-- end of putEvPlanDates -->
 
   
-  <!-- getPlanList -->
+  <!-- getEvPlanList -->
   <xs:element name="getEvPlanList" type="tns:getEvPlanList"/>
   <xs:element name="getEvPlanListResponse" type="tns:getEvPlanListResponse"/>
   <xs:complexType name="CevPlanListPackage">
@@ -1445,7 +1445,8 @@
       <xs:element name="orderpack" type="tns:CevPlanListPackage" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
-  <!-- end of getPlanList-->  
+  <!-- end of getEvPlanList-->  
+  
   <!-- putEvPlanList -->
   <xs:element name="putEvPlanList" type="tns:putEvPlanList"/>
   <xs:element name="putEvPlanListResponse" type="tns:putEvPlanListResponse"/>
@@ -1466,7 +1467,7 @@
 
   
     
-  <!-- getFactInfos -->
+  <!-- getEvFactInfos -->
   <xs:element name="getEvFactInfos" type="tns:getEvFactInfos"/>
   <xs:element name="getEvFactInfosResponse" type="tns:getEvFactInfosResponse"/>
   <xs:complexType name="CevFactInfosPackage">
@@ -1505,7 +1506,9 @@
       <xs:element name="orderpack" type="tns:CevFactInfosPackage" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
-  <!-- end of getFactInfo-->  
+  <!-- end of getEvFactInfo-->  
+  
+  
   <!-- putEvFactInfos -->
   <xs:element name="putEvFactInfos" type="tns:putEvFactInfos"/>
   <xs:element name="putEvFactInfosResponse" type="tns:putEvFactInfosResponse"/>
@@ -1525,7 +1528,7 @@
   <!-- end of putEvFactInfos -->
         
         
-  <!-- getFactExecs -->
+  <!-- getEvFactExecs -->
   <xs:element name="getEvFactExecs" type="tns:getEvFactExecs"/>
   <xs:element name="getEvFactExecsResponse" type="tns:getEvFactExecsResponse"/>
   <xs:complexType name="CevFactExecsPackage">
@@ -1562,7 +1565,9 @@
       <xs:element name="orderpack" type="tns:CevFactExecsPackage" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
-  <!-- end of getFactExecs-->  
+  <!-- end of getEvFactExecs-->  
+
+
   <!-- putEvFactExecs -->
   <xs:element name="putEvFactExecs" type="tns:putEvFactExecs"/>
   <xs:element name="putEvFactExecsResponse" type="tns:putEvFactExecsResponse"/>
