@@ -1308,9 +1308,9 @@ public class DCExchangeSrv {
     @WebMethod(operationName = "getEvFactExecs")
     @WebResult(name="orderpack")
     public CevFactExecsPackage getEvFactExecs(@WebParam(name = "username") String username, @WebParam(name = "password") String password, @WebParam(name = "sendercode") String sendercode, 
-                @WebParam(name = "year") int year, @WebParam(name = "mnth") int mnth, @WebParam(name = "code_mo") String code_mo, @WebParam(name = "execdate") Date execdate) {
+                @WebParam(name = "code_mo") String code_mo, @WebParam(name = "execdate") Date execdate) {
       try{
-            return CPackageInformation.evGetPackage(new CevFactExecsPackage(), username, password, sendercode, year, mnth, 0, null, null, code_mo, execdate);
+            return CPackageInformation.evGetPackage(new CevFactExecsPackage(), username, password, sendercode, 0, 0, 0, null, null, code_mo, execdate);
 
             
         }catch(Exception e){
