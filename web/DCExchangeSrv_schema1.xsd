@@ -1613,6 +1613,7 @@
       <xs:element name="invcdate" type="xs:date" minOccurs="0"/>
       <xs:element name="invcstts" type="xs:int" minOccurs="0"/>
       <xs:element name="ishob" type="xs:string" minOccurs="0"/>
+      <xs:element name="q_g" type="xs:string" minOccurs="0"/>
       <xs:element name="person" type="tns:cPerson" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>  

@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlType;
  *
  * @author YakubaDI
  */
-@XmlType(propOrder = {"rid","year","mnth","code_mo","smo_code","invcdatn","invcdato","invcdate","invcstts","ishob","person"})
+@XmlType(propOrder = {"rid","year","mnth","code_mo","smo_code","invcdatn","invcdato","invcdate","invcstts","ishob","q_g","person"})
 public class CevFactInvc {
     private int rid;
     private int year;
@@ -22,6 +22,7 @@ public class CevFactInvc {
     private Date invcdate = null;
     private int invcstts;
     private String ishob;
+    private String q_g;
     private CPerson person = new CPerson();
 
     public int getRid() {
@@ -102,6 +103,14 @@ public class CevFactInvc {
 
     public void setIshob(String ishob) {
         this.ishob = ishob;
+    }
+    
+    public String getQ_g() {
+        return q_g;
+    }
+
+    public void setQ_g(String q_g) {
+        this.q_g = q_g;
     }
 
     public CPerson getPerson() {
