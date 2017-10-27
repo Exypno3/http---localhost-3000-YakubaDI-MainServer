@@ -1084,7 +1084,7 @@ public class CPackageInformation {
         }
         catch(Exception e)
         {
-            WriteLog(e.toString(), "C:\\xcpt.txt");
+            //WriteLog(e.toString(), "C:\\xcpt.txt");
             
             SaveResponceInfoToDB(CPackageInformation.CreateErrorPackage(new CResponceOrdersPackage(), 1003, PackGuid), PackGuid);
             
