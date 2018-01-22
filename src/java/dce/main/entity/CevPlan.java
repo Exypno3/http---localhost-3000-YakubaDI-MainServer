@@ -76,6 +76,14 @@ public class CevPlan {
     public void setCategory(int category) {
         this.category = category;
     }
+    
+    public int getOpcode() {
+        return opcode;
+    }
+
+    public void setOpcode(int opcode) {
+        this.opcode = opcode;
+    }
 
     public CPerson getPerson() {
         return person;
