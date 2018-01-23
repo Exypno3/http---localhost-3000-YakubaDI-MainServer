@@ -5,6 +5,7 @@
  */
 package dce.main.entity;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlElement;
 /**
  *
  * @author YakubaDI
@@ -81,6 +82,7 @@ public class CevPlan {
         return opcode;
     }
 
+    @XmlElement(required = false, nillable = false)
     public void setOpcode(int opcode) {
         this.opcode = opcode;
     }
