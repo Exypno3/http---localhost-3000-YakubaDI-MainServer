@@ -58,6 +58,7 @@ public class CevPlan {
         return code_mo;
     }
 
+    @XmlElement(required = true, nillable = false)
     public void setCode_mo(String code_mo) {
         this.code_mo = code_mo;
     }
