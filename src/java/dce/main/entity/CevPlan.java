@@ -89,7 +89,7 @@ public class CevPlan {
         return opcode;
     }
 
-    @XmlElement(required = false, nillable = true)
+    @XmlElement(required = false, nillable = false)
     public void setOpcode(int opcode) {
         this.opcode = opcode;
     }
