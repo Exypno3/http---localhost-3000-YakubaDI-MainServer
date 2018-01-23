@@ -26,6 +26,7 @@ public class CevPlan {
         return rid;
     }
 
+    @XmlElement(required = true, nillable = false)
     public void setRid(int rid) {
         this.rid = rid;
     }
@@ -34,6 +35,7 @@ public class CevPlan {
         return kind;
     }
 
+    @XmlElement(required = true, nillable = false)
     public void setKind(int kind) {
         this.kind = kind;
     }
@@ -42,6 +44,7 @@ public class CevPlan {
         return year;
     }
 
+    @XmlElement(required = true, nillable = false)
     public void setYear(int year) {
         this.year = year;
     }
@@ -50,6 +53,7 @@ public class CevPlan {
         return mnth;
     }
 
+    @XmlElement(required = true, nillable = false)
     public void setMnth(int mnth) {
         this.mnth = mnth;
     }
@@ -67,6 +71,7 @@ public class CevPlan {
         return dfSection;
     }
 
+    @XmlElement(required = true, nillable = false)
     public void setDfSection(String dfSection) {
         this.dfSection = dfSection;
     }
@@ -75,6 +80,7 @@ public class CevPlan {
         return category;
     }
 
+    @XmlElement(required = true, nillable = false)
     public void setCategory(int category) {
         this.category = category;
     }
@@ -83,11 +89,12 @@ public class CevPlan {
         return opcode;
     }
 
-    @XmlElement(required = false, nillable = false)
+    @XmlElement(required = false, nillable = true)
     public void setOpcode(int opcode) {
         this.opcode = opcode;
     }
 
+    @XmlElement(required = true, nillable = false)
     public CPerson getPerson() {
         return person;
     }
