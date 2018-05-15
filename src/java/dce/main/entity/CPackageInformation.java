@@ -346,7 +346,7 @@ public class CPackageInformation {
                 lPackType = 6;
                 PackGuid = ((CKDInformationPackage)pIn).getP10_packinf().getP12_pakageguid();
             }
-            else if("dce.main.entity.COrderReservedPackage".equals(pIn.getClass().getName()))
+/*            else if("dce.main.entity.COrderReservedPackage".equals(pIn.getClass().getName()))
             {
                 lPackType = 7;
                 PackGuid = ((COrderReservedPackage)pIn).getP10_packinf().getP12_pakageguid();
@@ -376,7 +376,7 @@ public class CPackageInformation {
                 lPackType = 12;
                 PackGuid = ((CAssertReservedBedPackage)pIn).getP10_packinf().getP12_pakageguid();
             }
-                 
+*/                 
             _return.getR11_rsinf().setPakageGUIDSrc(PackGuid);
         
             _return.getR10_packinf().AddPakageInformation(new Date(), "9007",  UUID.randomUUID().toString());
