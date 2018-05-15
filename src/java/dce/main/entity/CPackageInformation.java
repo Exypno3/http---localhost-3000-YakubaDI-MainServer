@@ -756,7 +756,8 @@ public class CPackageInformation {
         
         return pIn;
     }
-    //--------------------------------------------------------------------------------------------------
+/*    
+//--------------------------------------------------------------------------------------------------
     public static <T> T MakeReport(T param, CAttachReportParam params, int reporttype, String username, String password, String sendercode)
     {
         try
@@ -792,7 +793,7 @@ public class CPackageInformation {
                     Calendar cal = Calendar.getInstance();
                     cal.setTime(params.getD_01());
                     int year = cal.get(Calendar.YEAR);
-                    int month = cal.get(Calendar.MONTH) + 1; /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+                    int month = cal.get(Calendar.MONTH) + 1; 
                     int day = cal.get(Calendar.DAY_OF_MONTH);
 
                     //DateFormat df = new SimpleDateFormat("dd.mm.yyyy HH:mm:ss");
@@ -826,6 +827,7 @@ public class CPackageInformation {
         catch(Exception e){return null;}
         
     }
+*/    
     //--------------------------------------------------------------------------------------------------
     public static <T> T evGetPackage(T param, String username, String password, String sendercode, 
         int yearCode, int mnthCode, int page, String smoCode, Date infoDate, 

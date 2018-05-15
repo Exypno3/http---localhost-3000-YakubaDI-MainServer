@@ -1200,7 +1200,7 @@ public class DCExchangeSrv {
         }
     }
     //------------------------------------------------------------------------------------------------------------------------------
-    /*Статистика по прикреплению СМО-МО на дату*/
+    /*Статистика по прикреплению СМО-МО на дату
     @WebMethod(operationName = "GetAttachAgregateSmoMoByDate")
     @WebResult(name="orderpack")
     public CAttachAgregateSmoMoByDate GetAttachAgregateSmoMoByDate(@WebParam(name = "username") String username, @WebParam(name = "password") String password, 
@@ -1211,7 +1211,7 @@ public class DCExchangeSrv {
         }catch(Exception e){
             return null;
         }
-    }
+    }*/
     //------------------------------------------------------------------------------------------------------------------------------
     @WebMethod(operationName = "SendAttachMoStreetSection")/*ok*/
     @WebResult(name="orderpack")
