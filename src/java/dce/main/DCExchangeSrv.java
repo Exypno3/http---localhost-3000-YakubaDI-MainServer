@@ -106,6 +106,7 @@ public class DCExchangeSrv {
         return 1;
     }
     //------------------------------------------------------------------------------------------------------------------------------
+/*    
     @WebMethod(operationName = "GetRealReservedBedList")
     @WebResult(name="orderpack")
     public COrderClinicPackage GetRealReservedBedList(@WebParam(name = "username") String username, @WebParam(name = "password") String password, 
@@ -118,58 +119,7 @@ public class DCExchangeSrv {
             return null;
         }
     }
-    //------------------------------------------------------------------------------------------------------------------------------
-    @WebMethod(operationName = "GetFreeKDInformation")
-    @WebResult(name="orderpack")
-    public CRealKDPackage GetFreeKDInformation(@WebParam(name = "username") String username, @WebParam(name = "password") String password, 
-                    @WebParam(name = "sendercode") String sendercode, @WebParam(name = "yearcode") int yearcode, @WebParam(name = "monthcode") int monthcode){
-      try{
-            return CPackageInformation.BuildPackage(new CRealKDPackage(), username, password, sendercode, "", "", yearcode, monthcode, "", null, 0, 0, 0);
-            
-        }catch(Exception e){
-            return null;
-        }
-    }
-    //------------------------------------------------------------------------------------------------------------------------------
-    @WebMethod(operationName = "GetFreeKDInformationByKPK")
-    @WebResult(name="orderpack")
-    public CRealKDPackage GetFreeKDInformationByKPK(@WebParam(name = "username") String username, @WebParam(name = "password") String password, 
-                    @WebParam(name = "sendercode") String sendercode, @WebParam(name = "kpkcode") String kpkcode, 
-                    @WebParam(name = "yearcode") int yearcode, @WebParam(name = "monthcode") int monthcode){
-      try{
-            return CPackageInformation.BuildPackage(new CRealKDPackage(), username, password, sendercode, kpkcode, "", yearcode, monthcode, "", null, 0, 0, 0);
-            
-        }catch(Exception e){
-            return null;
-        }
-    }
-    //------------------------------------------------------------------------------------------------------------------------------
-    @WebMethod(operationName = "GetFreeKDInformationByMO")
-    @WebResult(name="orderpack")
-    public CRealKDPackage GetFreeKDInformationByMO(@WebParam(name = "username") String username, @WebParam(name = "password") String password, 
-                    @WebParam(name = "sendercode") String sendercode, @WebParam(name = "mocode") String mocode, 
-                    @WebParam(name = "yearcode") int yearcode, @WebParam(name = "monthcode") int monthcode){
-      try{
-            return CPackageInformation.BuildPackage(new CRealKDPackage(), username, password, sendercode, "", mocode, yearcode, monthcode, "", null, 0, 0, 0);
-            
-        }catch(Exception e){
-            return null;
-        }
-    }
-    //------------------------------------------------------------------------------------------------------------------------------
-    @WebMethod(operationName = "GetFreeKDInformationByKPKMO")
-    @WebResult(name="orderpack")
-    public CRealKDPackage GetFreeKDInformationByKPKMO(@WebParam(name = "username") String username, @WebParam(name = "password") String password, 
-                    @WebParam(name = "sendercode") String sendercode, @WebParam(name = "mocode") String mocode, @WebParam(name = "kpkcode") String kpkcode, 
-                    @WebParam(name = "yearcode") int yearcode, @WebParam(name = "monthcode") int monthcode){
-      try{
-            return CPackageInformation.BuildPackage(new CRealKDPackage(), username, password, sendercode, kpkcode, mocode, yearcode, monthcode, "", null, 0, 0, 0);
-            
-        }catch(Exception e){
-            return null;
-        }
-    }
-    //------add 04.02.2014------------------------------------------------------------------------------------------------------------------
+//------add 04.02.2014------------------------------------------------------------------------------------------------------------------
     @WebMethod(operationName = "SendTryFreeBed")
     @WebResult(name="orderpack")
     public CResponceOrdersPackage SendTryFreeBed(@WebParam(name = "orderpack") CFreeBedPackage pinppack,
@@ -399,6 +349,60 @@ public class DCExchangeSrv {
             return CPackageInformation.CreateErrorPackage(new CResponceOrdersPackage(), 1003, pinppack.getP10_packinf().getP12_pakageguid());
         }
     }
+    //------------------------------------------------------------------------------------------------------------------------------
+    @WebMethod(operationName = "GetFreeKDInformation")
+    @WebResult(name="orderpack")
+    public CRealKDPackage GetFreeKDInformation(@WebParam(name = "username") String username, @WebParam(name = "password") String password, 
+                    @WebParam(name = "sendercode") String sendercode, @WebParam(name = "yearcode") int yearcode, @WebParam(name = "monthcode") int monthcode){
+      try{
+            return CPackageInformation.BuildPackage(new CRealKDPackage(), username, password, sendercode, "", "", yearcode, monthcode, "", null, 0, 0, 0);
+            
+        }catch(Exception e){
+            return null;
+        }
+    }
+    //------------------------------------------------------------------------------------------------------------------------------
+    @WebMethod(operationName = "GetFreeKDInformationByKPK")
+    @WebResult(name="orderpack")
+    public CRealKDPackage GetFreeKDInformationByKPK(@WebParam(name = "username") String username, @WebParam(name = "password") String password, 
+                    @WebParam(name = "sendercode") String sendercode, @WebParam(name = "kpkcode") String kpkcode, 
+                    @WebParam(name = "yearcode") int yearcode, @WebParam(name = "monthcode") int monthcode){
+      try{
+            return CPackageInformation.BuildPackage(new CRealKDPackage(), username, password, sendercode, kpkcode, "", yearcode, monthcode, "", null, 0, 0, 0);
+            
+        }catch(Exception e){
+            return null;
+        }
+    }
+    //------------------------------------------------------------------------------------------------------------------------------
+    @WebMethod(operationName = "GetFreeKDInformationByMO")
+    @WebResult(name="orderpack")
+    public CRealKDPackage GetFreeKDInformationByMO(@WebParam(name = "username") String username, @WebParam(name = "password") String password, 
+                    @WebParam(name = "sendercode") String sendercode, @WebParam(name = "mocode") String mocode, 
+                    @WebParam(name = "yearcode") int yearcode, @WebParam(name = "monthcode") int monthcode){
+      try{
+            return CPackageInformation.BuildPackage(new CRealKDPackage(), username, password, sendercode, "", mocode, yearcode, monthcode, "", null, 0, 0, 0);
+            
+        }catch(Exception e){
+            return null;
+        }
+    }
+    //------------------------------------------------------------------------------------------------------------------------------
+    @WebMethod(operationName = "GetFreeKDInformationByKPKMO")
+    @WebResult(name="orderpack")
+    public CRealKDPackage GetFreeKDInformationByKPKMO(@WebParam(name = "username") String username, @WebParam(name = "password") String password, 
+                    @WebParam(name = "sendercode") String sendercode, @WebParam(name = "mocode") String mocode, @WebParam(name = "kpkcode") String kpkcode, 
+                    @WebParam(name = "yearcode") int yearcode, @WebParam(name = "monthcode") int monthcode){
+      try{
+            return CPackageInformation.BuildPackage(new CRealKDPackage(), username, password, sendercode, kpkcode, mocode, yearcode, monthcode, "", null, 0, 0, 0);
+            
+        }catch(Exception e){
+            return null;
+        }
+    }
+    
+*/    
+    
     //------add 03.02.2014------------------------------------------------------------------------------------------------------------------
     @WebMethod(operationName = "GetKDInformationByKPKMO")
     @WebResult(name="orderpack")
@@ -464,6 +468,7 @@ public class DCExchangeSrv {
     @WebResult(name="orderpack")
     public CKDInformationPackage GetKDInformation(@WebParam(name = "username") String username, @WebParam(name = "password") String password, 
                     @WebParam(name = "sendercode") String sendercode){
+/* чушь какая-то
         try
         {
             CDBSever dbsever = new CDBSever(IConfigConstantsList.ConfMsgList[0], IConfigConstantsList.ConfMsgList[1]);
@@ -479,7 +484,7 @@ public class DCExchangeSrv {
         {
             return null;
         }
-        
+*/        
       try{
             return CPackageInformation.BuildPackage(new CKDInformationPackage(), username, password, sendercode, "", "", 0, 0, "", null, 0, 0, 0);
             

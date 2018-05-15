@@ -24,7 +24,7 @@
   <message name="MakeTestConnectResponse">
     <part name="parameters" element="tns:MakeTestConnectResponse"/>
   </message>
-  <message name="GetRealReservedBedList">
+  <!--message name="GetRealReservedBedList">
     <part name="parameters" element="tns:GetRealReservedBedList"/>
   </message>
   <message name="GetRealReservedBedListResponse">
@@ -89,7 +89,7 @@
   </message>
   <message name="SendTryReservedBedResponse">
     <part name="parameters" element="tns:SendTryReservedBedResponse"/>
-  </message>
+  </message-->
   <message name="GetKDInformationByKPKMO">
     <part name="parameters" element="tns:GetKDInformationByKPKMO"/>
   </message>
@@ -416,7 +416,7 @@
       <input wsam:Action="http://main.dce/DCExchangeSrv/MakeTestConnectRequest" message="tns:MakeTestConnect"/>
       <output wsam:Action="http://main.dce/DCExchangeSrv/MakeTestConnectResponse" message="tns:MakeTestConnectResponse"/>
     </operation>
-    <operation name="GetRealReservedBedList">
+    <!--operation name="GetRealReservedBedList">
       <input wsam:Action="http://main.dce/DCExchangeSrv/GetRealReservedBedListRequest" message="tns:GetRealReservedBedList"/>
       <output wsam:Action="http://main.dce/DCExchangeSrv/GetRealReservedBedListResponse" message="tns:GetRealReservedBedListResponse"/>
     </operation>
@@ -459,7 +459,7 @@
     <operation name="SendTryReservedBed">
       <input wsam:Action="http://main.dce/DCExchangeSrv/SendTryReservedBedRequest" message="tns:SendTryReservedBed"/>
       <output wsam:Action="http://main.dce/DCExchangeSrv/SendTryReservedBedResponse" message="tns:SendTryReservedBedResponse"/>
-    </operation>
+    </operation-->
     <operation name="GetKDInformationByKPKMO">
       <input wsam:Action="http://main.dce/DCExchangeSrv/GetKDInformationByKPKMORequest" message="tns:GetKDInformationByKPKMO"/>
       <output wsam:Action="http://main.dce/DCExchangeSrv/GetKDInformationByKPKMOResponse" message="tns:GetKDInformationByKPKMOResponse"/>
@@ -715,7 +715,7 @@
         <soap:body use="literal"/>
       </output>
     </operation>
-    <operation name="GetRealReservedBedList">
+    <!--operation name="GetRealReservedBedList">
       <soap:operation soapAction=""/>
       <input>
         <soap:body use="literal"/>
@@ -813,7 +813,7 @@
       <output>
         <soap:body use="literal"/>
       </output>
-    </operation>
+    </operation-->
     <operation name="GetKDInformationByKPKMO">
       <soap:operation soapAction=""/>
       <input>
