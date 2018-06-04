@@ -370,6 +370,7 @@
       <xs:element name="k15_cntfrmn" type="xs:int"/>
       <xs:element name="k16_cntfrwm" type="xs:int"/>
       <xs:element name="k17_cntfrch" type="xs:int"/>
+      <xs:element name="k20_cntfrall" type="xs:int"/>
       <xs:element name="k18_vkdlist" type="tns:cVolumeKDSMOList" minOccurs="0"/>
       <xs:element name="k19_iguid" type="xs:string" minOccurs="0"/>
     </xs:sequence>
