@@ -24,7 +24,7 @@ public class CBedProfile {
     private int k15_cntfrmn;// свободных коек мужчины
     private int k16_cntfrwm;// свободных коек женщины
     private int k17_cntfrch;// свободных коек дети
-    private int k20_cntfrall;// свободных коек всего
+//    private int k20_cntfrall;// свободных коек всего
     
     private CVolumeKDSMOList k18_vkdlist;
 
@@ -32,13 +32,13 @@ public class CBedProfile {
     private String k19_iguid = UUID.randomUUID().toString();
 
 
-    public int getK20_cntfrall() {
-        return k20_cntfrall;
-    }
+//    public int getK20_cntfrall() {
+//        return k20_cntfrall;
+//    }
 
-    public void setK20_cntfrall(int k20_cntfrall) {
-        this.k20_cntfrall = k20_cntfrall;
-    }
+//    public void setK20_cntfrall(int k20_cntfrall) {
+//        this.k20_cntfrall = k20_cntfrall;
+//    }
 
     //-----------------------------------------------------------------------------------------------------------------
     public String getK19_iguid() {return this.k19_iguid;}
