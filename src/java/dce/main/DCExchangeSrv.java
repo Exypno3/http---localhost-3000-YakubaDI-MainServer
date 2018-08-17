@@ -1299,9 +1299,9 @@ public class DCExchangeSrv {
     @WebMethod(operationName = "getEvFactInfos")
     @WebResult(name="orderpack")
     public CevFactInfosPackage getEvFactInfos(@WebParam(name = "username") String username, @WebParam(name = "password") String password, @WebParam(name = "sendercode") String sendercode, 
-                @WebParam(name = "smo_code") String smo_code, @WebParam(name = "infodate") Date infodate) {
+                @WebParam(name = "smo_code") String smo_code, @WebParam(name = "infodate") Date infodate, @WebParam(name = "page") int page) {
       try{
-            return CPackageInformation.evGetPackage(new CevFactInfosPackage(), username, password, sendercode, 0, 0, 0, smo_code, infodate, null, null);
+            return CPackageInformation.evGetPackage(new CevFactInfosPackage(), username, password, sendercode, 0, 0, page, smo_code, infodate, null, null);
 
             
         }catch(Exception e){
@@ -1313,9 +1313,9 @@ public class DCExchangeSrv {
     @WebMethod(operationName = "getEvFactExecs")
     @WebResult(name="orderpack")
     public CevFactExecsPackage getEvFactExecs(@WebParam(name = "username") String username, @WebParam(name = "password") String password, @WebParam(name = "sendercode") String sendercode, 
-                @WebParam(name = "code_mo") String code_mo, @WebParam(name = "execdate") Date execdate) {
+                @WebParam(name = "code_mo") String code_mo, @WebParam(name = "execdate") Date execdate, @WebParam(name = "page") int page) {
       try{
-            return CPackageInformation.evGetPackage(new CevFactExecsPackage(), username, password, sendercode, 0, 0, 0, null, null, code_mo, execdate);
+            return CPackageInformation.evGetPackage(new CevFactExecsPackage(), username, password, sendercode, 0, 0, page, null, null, code_mo, execdate);
 
             
         }catch(Exception e){

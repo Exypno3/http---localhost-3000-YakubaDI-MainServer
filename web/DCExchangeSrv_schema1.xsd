@@ -1501,6 +1501,7 @@
       <xs:element name="sendercode" type="xs:string" minOccurs="0"/>
       <xs:element name="smo_code" type="xs:string" minOccurs="0"/>
       <xs:element name="infodate" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="page" type="xs:int" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="getEvFactInfosResponse">
@@ -1560,6 +1561,7 @@
       <xs:element name="sendercode" type="xs:string" minOccurs="0"/>
       <xs:element name="code_mo" type="xs:string" minOccurs="0"/>
       <xs:element name="execdate" type="xs:date" minOccurs="0"/>
+      <xs:element name="page" type="xs:int" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="getEvFactExecsResponse">
