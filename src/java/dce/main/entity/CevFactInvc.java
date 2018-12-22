@@ -23,6 +23,10 @@ public class CevFactInvc {
     private int invcstts;
     private String ishob;
     private String q_g;
+    private String mkbx;
+    private String pr_d_n;
+    private String mkbxs;
+    private String pr_ds_n;
     private CPerson person = new CPerson();
 
     public int getRid() {
@@ -113,6 +117,39 @@ public class CevFactInvc {
         this.q_g = q_g;
     }
 
+
+    public String getMkbx() {
+        return mkbx;
+    }
+
+    public void setMkbx(String mkbx) {
+        this.mkbx = mkbx;
+    }
+
+    public String getPr_d_n() {
+        return pr_d_n;
+    }
+
+    public void setPr_d_n(String pr_d_n) {
+        this.pr_d_n = pr_d_n;
+    }
+
+    public String getMkbxs() {
+        return mkbxs;
+    }
+
+    public void setMkbxs(String mkbxs) {
+        this.mkbxs = mkbxs;
+    }
+
+    public String getPr_ds_n() {
+        return pr_ds_n;
+    }
+
+    public void setPr_ds_n(String pr_ds_n) {
+        this.pr_ds_n = pr_ds_n;
+    }
+    
     public CPerson getPerson() {
         return person;
     }

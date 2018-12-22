@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package dce.main.entity;
+import java.util.Date;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlElement;
 /**
@@ -19,6 +20,11 @@ public class CevPlan {
     private String code_mo;
     private String dfSection;
     private int category;
+    private String mkbx;
+    private Date mkbxdate = null;
+    private int mkbxstts;
+    private int mkbxmeth;
+    private String doc_ss;
     private int opcode;
     private CPerson person = new CPerson();
 
@@ -84,6 +90,53 @@ public class CevPlan {
     public void setCategory(int category) {
         this.category = category;
     }
+    
+
+    public String getMkbx() {
+        return mkbx;
+    }
+
+    @XmlElement(required = false, nillable = false)
+    public void setMkbx(String mkbx) {
+        this.mkbx = mkbx;
+    }
+
+    public Date getMkbxdate() {
+        return mkbxdate;
+    }
+
+    @XmlElement(required = false, nillable = false)
+    public void setMkbxdate(Date mkbxdate) {
+        this.mkbxdate = mkbxdate;
+    }
+
+    public int getMkbxstts() {
+        return mkbxstts;
+    }
+
+    @XmlElement(required = false, nillable = false)
+    public void setMkbxstts(int mkbxstts) {
+        this.mkbxstts = mkbxstts;
+    }
+
+    public int getMkbxmeth() {
+        return mkbxmeth;
+    }
+
+    @XmlElement(required = false, nillable = false)
+    public void setMkbxmeth(int mkbxmeth) {
+        this.mkbxmeth = mkbxmeth;
+    }
+
+    public String getDoc_ss() {
+        return doc_ss;
+    }
+
+    @XmlElement(required = false, nillable = false)
+    public void setDoc_ss(String doc_ss) {
+        this.doc_ss = doc_ss;
+    }
+    
     
     public int getOpcode() {
         return opcode;

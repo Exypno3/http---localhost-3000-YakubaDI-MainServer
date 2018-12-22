@@ -1428,6 +1428,11 @@
       <xs:element name="code_mo" type="xs:string" minOccurs="0"/>
       <xs:element name="dfSection" type="xs:string" minOccurs="0"/>
       <xs:element name="category" type="xs:int" minOccurs="0"/>
+      <xs:element name="mkbx" type="xs:string" minOccurs="0"/>
+      <xs:element name="mkbxdate" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="mkbxstts" type="xs:string" minOccurs="0"/>
+      <xs:element name="mkbxmeth" type="xs:string" minOccurs="0"/>
+      <xs:element name="doc_ss" type="xs:string" minOccurs="0"/>
       <xs:element name="opcode" type="xs:int" minOccurs="0"/>
       <xs:element name="person" type="tns:cPerson" minOccurs="0"/>
     </xs:sequence>
@@ -1491,6 +1496,7 @@
       <xs:element name="infodate" type="xs:dateTime" minOccurs="0"/>
       <xs:element name="infometh" type="xs:int" minOccurs="0"/>
       <xs:element name="infostep" type="xs:int" minOccurs="0"/>
+      <xs:element name="inforslt" type="xs:int" minOccurs="0"/>      
       <xs:element name="person" type="tns:cPerson" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>  
@@ -1551,6 +1557,7 @@
       <xs:element name="code_mo" type="xs:string" minOccurs="0"/>
       <xs:element name="execdate" type="xs:date" minOccurs="0"/>
       <xs:element name="execstep" type="xs:int" minOccurs="0"/>
+      <xs:element name="execmeth" type="xs:int" minOccurs="0"/>      
       <xs:element name="person" type="tns:cPerson" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>  
@@ -1618,6 +1625,10 @@
       <xs:element name="invcstts" type="xs:int" minOccurs="0"/>
       <xs:element name="ishob" type="xs:string" minOccurs="0"/>
       <xs:element name="q_g" type="xs:string" minOccurs="0"/>
+      <xs:element name="mkbx" type="xs:string" minOccurs="0"/>
+      <xs:element name="pr_d_n" type="xs:string" minOccurs="0"/>
+      <xs:element name="mkbxs" type="xs:string" minOccurs="0"/>
+      <xs:element name="pr_ds_n" type="xs:string" minOccurs="0"/>
       <xs:element name="person" type="tns:cPerson" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>  

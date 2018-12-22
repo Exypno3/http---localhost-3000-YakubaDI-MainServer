@@ -19,6 +19,7 @@ public class CevFactInfo {
     private Date infodate = null;
     private int infometh;
     private int infostep;
+    private int inforslt;
     private CPerson person = new CPerson();
 
 
@@ -68,6 +69,15 @@ public class CevFactInfo {
 
     public void setInfostep(int infostep) {
         this.infostep = infostep;
+    }
+
+
+    public int getInforslt() {
+        return inforslt;
+    }
+
+    public void setInforslt(int inforslt) {
+        this.inforslt = inforslt;
     }
 
     public CPerson getPerson() {

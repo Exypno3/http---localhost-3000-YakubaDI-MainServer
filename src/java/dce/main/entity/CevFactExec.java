@@ -16,6 +16,7 @@ public class CevFactExec {
     private String code_mo;
     private Date execdate = null;
     private int execstep;
+    private int execmeth;
     private CPerson person = new CPerson();
 
     public int getRid() {
@@ -50,6 +51,15 @@ public class CevFactExec {
         this.execstep = execstep;
     }
 
+
+    public int getExecmeth() {
+        return execmeth;
+    }
+
+    public void setExecmeth(int execmeth) {
+        this.execmeth = execmeth;
+    }
+    
     public CPerson getPerson() {
         return person;
     }
