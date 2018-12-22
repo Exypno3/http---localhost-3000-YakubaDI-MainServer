@@ -11,7 +11,7 @@ import javax.xml.bind.annotation.XmlElement;
  *
  * @author YakubaDI
  */
-@XmlType(propOrder = {"rid","kind","year","mnth","code_mo","dfSection","category","opcode","person"})
+@XmlType(propOrder = {"rid","kind","year","mnth","code_mo","dfSection","category","mkbx","mkbxdate","mkbxstts","mkbxmeth","doc_ss","opcode","person"})
 public class CevPlan {
     private int rid;
     private int kind;

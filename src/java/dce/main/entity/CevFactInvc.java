@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlType;
  *
  * @author YakubaDI
  */
-@XmlType(propOrder = {"rid","year","mnth","code_mo","smo_code","invcdatn","invcdato","invcdate","invcstts","ishob","q_g","person"})
+@XmlType(propOrder = {"rid","year","mnth","code_mo","smo_code","invcdatn","invcdato","invcdate","invcstts","ishob","q_g","mkbx","pr_d_n","mkbxs","pr_ds_n","person"})
 public class CevFactInvc {
     private int rid;
     private int year;

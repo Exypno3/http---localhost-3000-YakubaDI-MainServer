@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlType;
  *
  * @author YakubaDI
  */
-@XmlType(propOrder = {"rid","code_mo","execdate","execstep","person"})
+@XmlType(propOrder = {"rid","code_mo","execdate","execstep","execmeth","person"})
 public class CevFactExec {
     private int rid;
     private String code_mo;

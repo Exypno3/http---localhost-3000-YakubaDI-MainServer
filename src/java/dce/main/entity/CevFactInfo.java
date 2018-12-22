@@ -11,7 +11,7 @@ import javax.xml.bind.annotation.XmlType;
  *
  * @author YakubaDI
  */
-@XmlType(propOrder = {"rid","smo_code","code_mo","infodate","infometh","infostep","person"})
+@XmlType(propOrder = {"rid","smo_code","code_mo","infodate","infometh","infostep","inforslt","person"})
 public class CevFactInfo {
     private int rid;
     private String smo_code;
