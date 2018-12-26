@@ -9,10 +9,11 @@ import javax.xml.bind.annotation.XmlType;
  *
  * @author YakubaDI
  */
-@XmlType(propOrder = {"rid","kind","year","mnth","code_mo","quantity"})
+@XmlType(propOrder = {"rid","kind","kind2","year","mnth","code_mo","quantity"})
 public class CevPlanQuantity {
     private int rid;
     private int kind;
+    private int kind2;
     private int year;
     private int mnth;
     private String code_mo;
@@ -32,6 +33,14 @@ public class CevPlanQuantity {
 
     public void setKind(int kind) {
         this.kind = kind;
+    }
+
+    public int getKind2() {
+        return kind2;
+    }
+
+    public void setKind2(int kind2) {
+        this.kind2 = kind2;
     }
 
     public int getYear() {
