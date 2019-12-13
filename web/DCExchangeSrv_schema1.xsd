@@ -1559,6 +1559,7 @@
       <xs:element name="execdate" type="xs:date" minOccurs="0"/>
       <xs:element name="execstep" type="xs:int" minOccurs="0"/>
       <xs:element name="execmeth" type="xs:int" minOccurs="0"/>      
+      <xs:element name="prevdate" type="xs:date" minOccurs="0"/>
       <xs:element name="person" type="tns:cPerson" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>  

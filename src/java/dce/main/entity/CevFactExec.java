@@ -10,13 +10,23 @@ import javax.xml.bind.annotation.XmlType;
  *
  * @author YakubaDI
  */
-@XmlType(propOrder = {"rid","code_mo","execdate","execstep","execmeth","person"})
+@XmlType(propOrder = {"rid","code_mo","execdate","execstep","execmeth","prevdate","person"})
 public class CevFactExec {
     private int rid;
     private String code_mo;
     private Date execdate = null;
     private int execstep;
     private int execmeth;
+    private Date prevdate = null;
+
+    public Date getPrevdate() {
+        return prevdate;
+    }
+
+    public void setPrevdate(Date prevdate) {
+        this.prevdate = prevdate;
+    }
+    
     private CPerson person = new CPerson();
 
     public int getRid() {
