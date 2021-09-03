@@ -402,6 +402,16 @@
   <!-- end of getEvPlanDates -->
   
   
+   <!-- getEvUdvnStats -->
+  <message name="getEvUdvnStats">
+    <part name="parameters" element="tns:getEvUdvnStats"/>
+  </message>
+  <message name="getEvUdvnStatsResponse">
+    <part name="parameters" element="tns:getEvUdvnStatsResponse"/>
+  </message>
+  <!-- end of getEvPlanDates -->
+  
+  
 
   <portType name="DCExchangeSrv">
     <operation name="SendAttachDoctorSectionInformation">
@@ -678,6 +688,14 @@
     <operation name="getEvFactInvcs">
       <input wsam:Action="http://main.dce/DCExchangeSrv/getEvFactInvcsRequest" message="tns:getEvFactInvcs"/>
       <output wsam:Action="http://main.dce/DCExchangeSrv/getEvFactInvcsResponse" message="tns:getEvFactInvcsResponse"/>
+    </operation>
+    <!-- end of getEvPlanDates -->
+
+
+    <!-- getEvUdvnStats -->
+    <operation name="getEvUdvnStats">
+      <input wsam:Action="http://main.dce/DCExchangeSrv/getEvUdvnStatsRequest" message="tns:getEvUdvnStats"/>
+      <output wsam:Action="http://main.dce/DCExchangeSrv/getEvUdvnStatsResponse" message="tns:getEvUdvnStatsResponse"/>
     </operation>
     <!-- end of getEvPlanDates -->
 
@@ -1258,6 +1276,17 @@
     </operation>
     <!-- end of getEvFactInvcs -->
     
+    <!-- getEvUdvnStats -->
+    <operation name="getEvUdvnStats">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <!-- end of getEvUdvnStats -->
     
 
   </binding>

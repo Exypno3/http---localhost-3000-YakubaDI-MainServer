@@ -137,6 +137,10 @@ public class CMarshalUtility {
             {
                 context = JAXBContext.newInstance(dce.main.entity.CevFactInvcsPackage.class);
             }
+            else if("dce.main.entity.CevUdvnStatsPackage".equals(param.getClass().getName()))
+            {
+                context = JAXBContext.newInstance(dce.main.entity.CevUdvnStatsPackage.class);
+            }
 
             
             Marshaller m = context.createMarshaller();

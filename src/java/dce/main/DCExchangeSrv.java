@@ -1338,6 +1338,21 @@ public class DCExchangeSrv {
     }    
     
     //------------------------------------------------------------------------------------------------------------------------------
+    @WebMethod(operationName = "getEvUdvnStats")
+    @WebResult(name="orderpack")
+    public CevUdvnStatsPackage getEvUdvnStats(@WebParam(name = "username") String username, @WebParam(name = "password") String password, @WebParam(name = "sendercode") String sendercode, 
+                @WebParam(name = "page") int page) {
+      try{
+            return CPackageInformation.evGetPackage(new CevUdvnStatsPackage(), username, password, sendercode, 0, 0, page, null, null, null, null);
+
+            
+        }catch(Exception e){
+            return null;
+        }    
+    }    
+    
+    
+    //------------------------------------------------------------------------------------------------------------------------------
     @WebMethod(operationName = "putEvContacts")
     @WebResult(name="responcepack")
     public CResponceOrdersPackage putEvContacts(@WebParam(name = "orderpack") CevContactsPackage pinppack,
