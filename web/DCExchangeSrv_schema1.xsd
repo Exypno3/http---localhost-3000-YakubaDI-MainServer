@@ -1658,24 +1658,29 @@
 
   <!-- getUdvnStats -->
   <xs:element name="getEvUdvnStats" type="tns:getEvUdvnStats"/>
+
   <xs:element name="getEvUdvnStatsResponse" type="tns:getEvUdvnStatsResponse"/>
+
   <xs:complexType name="CevUdvnStatsPackage">
     <xs:sequence>
       <xs:element name="p10_packinf" type="tns:cPackageInformation" minOccurs="0"/>
       <xs:element name="evUdvnStats" type="tns:CevUdvnStats" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
+
   <xs:complexType name="CevUdvnStats">
     <xs:sequence>
       <xs:element name="evUdvnStat" type="tns:CevUdvnStat" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>  
+
   <xs:complexType name="CevUdvnStat">
     <xs:sequence>
       <xs:element name="rid" type="xs:int" minOccurs="0"/>
       <xs:element name="person" type="tns:cPerson" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>  
+
   <xs:complexType name="getEvUdvnStats">
     <xs:sequence>
       <xs:element name="username" type="xs:string" minOccurs="0"/>
@@ -1684,6 +1689,7 @@
       <xs:element name="page" type="xs:int" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
+
   <xs:complexType name="getEvUdvnStatsResponse">
     <xs:sequence>
       <xs:element name="orderpack" type="tns:CevUdvnStatsPackage" minOccurs="0"/>

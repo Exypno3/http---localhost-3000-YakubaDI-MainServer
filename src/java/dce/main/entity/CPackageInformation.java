@@ -752,6 +752,7 @@ public class CPackageInformation {
         else if("dce.main.entity.CevFactInfosPackage".equals(pIn.getClass().getName()))((CevFactInfosPackage)pIn).setP10_packinf(_return);
         else if("dce.main.entity.CevFactExecsPackage".equals(pIn.getClass().getName()))((CevFactExecsPackage)pIn).setP10_packinf(_return);
         else if("dce.main.entity.CevFactInvcsPackage".equals(pIn.getClass().getName()))((CevFactInvcsPackage)pIn).setP10_packinf(_return);
+        else if("dce.main.entity.CevUdvnStatsPackage".equals(pIn.getClass().getName()))((CevUdvnStatsPackage)pIn).setP10_packinf(_return);
         
         
         return pIn;
@@ -880,6 +881,11 @@ public class CPackageInformation {
             {
                 PackType = 238; 
                 jc = JAXBContext.newInstance(dce.main.entity.CevFactInvcsPackage.class);
+            }
+            else if(param.getClass().getName() == "dce.main.entity.CevUdvnStatsPackage")
+            {
+                PackType = 239; 
+                jc = JAXBContext.newInstance(dce.main.entity.CevUdvnStatsPackage.class);
             }
             
             
