@@ -10,7 +10,6 @@ package dce.main.entity;
  * @author YakubaDI
  */
 public class CevUdvnStats {
-    
     private CevUdvnStat evUdvnStat[];
 
     public CevUdvnStat[] getEvUdvnStat() {

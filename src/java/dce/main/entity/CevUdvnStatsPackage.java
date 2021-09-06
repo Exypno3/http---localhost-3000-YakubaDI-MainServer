@@ -6,7 +6,6 @@
 package dce.main.entity;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
-
 /**
  *
  * @author YakubaDI

@@ -683,7 +683,7 @@
       <input wsam:Action="http://main.dce/DCExchangeSrv/getEvFactExecsRequest" message="tns:getEvFactExecs"/>
       <output wsam:Action="http://main.dce/DCExchangeSrv/getEvFactExecsResponse" message="tns:getEvFactExecsResponse"/>
     </operation>
-    <!-- end of getEvPlanDates -->
+    <!-- end of getEvFactExecs -->
 
     <!-- putEvFactExecs -->
     <operation name="putEvFactExecs">
@@ -697,7 +697,7 @@
       <input wsam:Action="http://main.dce/DCExchangeSrv/getEvFactInvcsRequest" message="tns:getEvFactInvcs"/>
       <output wsam:Action="http://main.dce/DCExchangeSrv/getEvFactInvcsResponse" message="tns:getEvFactInvcsResponse"/>
     </operation>
-    <!-- end of getEvPlanDates -->
+    <!-- end of getEvFactInvcs -->
 
 
     <!-- getEvUdvnStats -->
@@ -705,7 +705,7 @@
       <input wsam:Action="http://main.dce/DCExchangeSrv/getEvUdvnStatsRequest" message="tns:getEvUdvnStats">
       <output wsam:Action="http://main.dce/DCExchangeSrv/getEvUdvnStatsResponse" message="tns:getEvUdvnStatsResponse"/>
     </operation>
-    <!-- end of getEvPlanDates -->
+    <!-- end of getEvUdvnStats -->
 
 
   </portType>
