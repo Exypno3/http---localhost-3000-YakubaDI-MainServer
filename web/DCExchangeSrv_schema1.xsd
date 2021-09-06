@@ -1600,7 +1600,7 @@
   <!-- end of putEvFactExecs -->
 
 
-  <!-- getUdvnStats -->
+  <!-- getFactInvcs -->
   <xs:element name="getEvFactInvcs" type="tns:getEvFactInvcs"/>
   <xs:element name="getEvFactInvcsResponse" type="tns:getEvFactInvcsResponse"/>
   <xs:complexType name="CevFactInvcsPackage">
@@ -1681,8 +1681,6 @@
       <xs:element name="username" type="xs:string" minOccurs="0"/>
       <xs:element name="password" type="xs:string" minOccurs="0"/>
       <xs:element name="sendercode" type="xs:string" minOccurs="0"/>
-      <xs:element name="year" type="xs:int" minOccurs="0"/>
-      <xs:element name="mnth" type="xs:int" minOccurs="0"/>
       <xs:element name="page" type="xs:int" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
