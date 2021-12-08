@@ -702,8 +702,8 @@
 
     <!-- getEvUdvnStats -->
     <operation name="getEvUdvnStats">
-      <input wsam:Action="http://main.dce/DCExchangeSrv/getEvUdvnStatsRequest" message="tns:getEvUdvnStats">
-      <output wsam:Action="http://main.dce/DCExchangeSrv/getEvUdvnStatsResponse" message="tns:getEvUdvnStatsResponse"/>
+      <input wsam:Action="http://main.dce/DCExchangeSrv/getEvUdvnStatsRequest" message="tns:getEvUdvnStats" />
+      <output wsam:Action="http://main.dce/DCExchangeSrv/getEvUdvnStatsResponse" message="tns:getEvUdvnStatsResponse" />
     </operation>
     <!-- end of getEvUdvnStats -->
 

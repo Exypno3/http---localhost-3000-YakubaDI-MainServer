@@ -6,7 +6,7 @@
 //-----------------------------------------------------------------------------------------------------------------
 package dce.main.entity;
 
-import java.util.LinkedList;
+//import java.util.LinkedList;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**

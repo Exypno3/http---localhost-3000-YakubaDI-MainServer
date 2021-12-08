@@ -24,7 +24,7 @@ import java.net.URLConnection;
 import java.net.URLEncoder;
 import java.net.UnknownHostException;
 import java.sql.ResultSet;
-import java.sql.Types;
+//import java.sql.Types;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;

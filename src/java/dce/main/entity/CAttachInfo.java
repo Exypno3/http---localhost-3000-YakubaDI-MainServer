@@ -8,6 +8,7 @@ public class CAttachInfo {
     private String a12_sect; 
     private int a13_attp; /* тип прикрепления 1 - первичное, 2 - по заявлению*/
     private int a14_pr; /*1 - по перезду*/
+    private int a15_profile;
     //-----------------------------------------------------------------------------------------------------------------
     public int getA14_pr() {return a14_pr;}
     public void setA14_pr(int a14_pr) {this.a14_pr = a14_pr;}    
@@ -24,5 +25,11 @@ public class CAttachInfo {
     public int getA13_attp() {return this.a13_attp;}
     public void setA13_attp(int pa15_attp) {this.a13_attp = pa15_attp;}
     //-----------------------------------------------------------------------------------------------------------------
+	public int getA15_profile() {
+		return a15_profile;
+	}
+	public void setA15_profile(int a15_profile) {
+		this.a15_profile = a15_profile;
+	}
 }
 //-----------------------------------------------------------------------------------------------------------------

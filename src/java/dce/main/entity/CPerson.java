@@ -7,8 +7,8 @@
 package dce.main.entity;
 
 import java.util.Date;
-import java.util.LinkedList;
-import javax.xml.bind.annotation.XmlType;
+//import java.util.LinkedList;
+//import javax.xml.bind.annotation.XmlType;
 /**
  *
  * @author YaluplinMD
